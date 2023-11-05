@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.firstsemfinal.Controller.dashbordformController">
+   <children>
+      <AnchorPane prefHeight="780.0" prefWidth="1510.0">
+         <children>
+            <AnchorPane layoutX="238.0" layoutY="1.0" prefHeight="778.0" prefWidth="1282.0">
+               <children>
+                  <ImageView fitHeight="366.0" fitWidth="751.0" layoutX="86.0" layoutY="159.0">
+                     <image>
+                        <Image url="@../images/juice-bar-business-plan-sales-monthly-780x384.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="446.0" layoutY="14.0" text="Dashbord">
+                     <font>
+                        <Font name="System Italic" size="90.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="86.0" layoutY="113.0" text="Customer Report">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="922.0" layoutY="89.0" prefHeight="131.0" prefWidth="286.0" style="-fx-background-color: green;">
+                     <children>
+                        <Label layoutX="70.0" layoutY="14.0" prefHeight="43.0" prefWidth="181.0" text="2023.11.04" textFill="#060b05">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="80.0" layoutY="69.0" text="8.30 AM">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </AnchorPane>
+                  <ImageView fitHeight="280.0" fitWidth="310.0" layoutX="913.0" layoutY="349.0">
+                     <image>
+                        <Image url="@../images/logo+for+dark+ground.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane layoutX="520.0" layoutY="583.0" prefHeight="131.0" prefWidth="302.0" style="-fx-background-color: green;">
+                     <children>
+                        <Label layoutX="130.0" layoutY="74.0" text="00">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="18.0" text="Total Customer">
+                           <font>
+                              <Font size="38.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="103.0" layoutY="583.0" prefHeight="131.0" prefWidth="302.0" style="-fx-background-color: green;">
+                     <children>
+                        <Label layoutX="47.0" layoutY="20.0" text="Total Orders">
+                           <font>
+                              <Font size="38.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="120.0" layoutY="75.0" text="00">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <Button layoutX="38.0" layoutY="684.0" mnemonicParsing="false" style="-fx-background-color: gray;" text="Back">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="131.0" fitWidth="588.0" layoutX="-215.0" layoutY="276.0" rotate="90.0">
+               <image>
+                  <Image url="@../images/green-food-featured.jpeg" />
+               </image>
+            </ImageView>
+            <Button layoutX="28.0" layoutY="59.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="102.0" />
+            <ImageView fitHeight="79.0" fitWidth="94.0" layoutX="32.0" layoutY="62.0">
+               <image>
+                  <Image url="@../images/user.gif" />
+               </image>
+            </ImageView>
+            <Button layoutX="28.0" layoutY="290.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="102.0" />
+            <Button layoutX="28.0" layoutY="407.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="102.0" />
+            <Button layoutX="28.0" layoutY="527.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="102.0" />
+            <Label layoutX="156.0" layoutY="88.0" style="-fx-background-color: black;" text="Customer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="25.0" layoutY="166.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="102.0" />
+            <ImageView fitHeight="79.0" fitWidth="94.0" layoutX="32.0" layoutY="411.0">
+               <image>
+                  <Image url="@../images/employee.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="86.0" fitWidth="94.0" layoutX="29.0" layoutY="166.0">
+               <image>
+                  <Image url="@../images/order.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="79.0" fitWidth="94.0" layoutX="32.0" layoutY="295.0">
+               <image>
+                  <Image url="@../images/item.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="79.0" fitWidth="94.0" layoutX="32.0" layoutY="530.0">
+               <image>
+                  <Image url="@../images/img.icons8.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="156.0" layoutY="195.0" style="-fx-background-color: black;" text="Order" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="156.0" layoutY="319.0" style="-fx-background-color: black;" text="Item" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="156.0" layoutY="443.0" style="-fx-background-color: black;" text="Employee" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="156.0" layoutY="563.0" style="-fx-background-color: black;" text="Supplier" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
