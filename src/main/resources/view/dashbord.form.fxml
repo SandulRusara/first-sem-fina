@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -14,9 +18,9 @@
          <children>
             <AnchorPane layoutX="238.0" layoutY="1.0" prefHeight="778.0" prefWidth="1282.0">
                <children>
-                  <ImageView fitHeight="366.0" fitWidth="751.0" layoutX="86.0" layoutY="159.0">
+                  <ImageView fitHeight="787.0" fitWidth="1354.0" opacity="0.18">
                      <image>
-                        <Image url="@../images/juice-bar-business-plan-sales-monthly-780x384.png" />
+                        <Image url="@../images/4too.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="446.0" layoutY="14.0" text="Dashbord">
@@ -29,7 +33,7 @@
                         <Font name="System Bold" size="21.0" />
                      </font>
                   </Label>
-                  <AnchorPane layoutX="922.0" layoutY="89.0" prefHeight="131.0" prefWidth="286.0" style="-fx-background-color: green;">
+                  <AnchorPane layoutX="950.0" layoutY="86.0" prefHeight="131.0" prefWidth="286.0" style="-fx-background-color: gray;">
                      <children>
                         <Label layoutX="70.0" layoutY="14.0" prefHeight="43.0" prefWidth="181.0" text="2023.11.04" textFill="#060b05">
                            <font>
@@ -46,12 +50,12 @@
                         <Insets />
                      </opaqueInsets>
                   </AnchorPane>
-                  <ImageView fitHeight="280.0" fitWidth="310.0" layoutX="913.0" layoutY="349.0">
+                  <ImageView fitHeight="280.0" fitWidth="310.0" layoutX="950.0" layoutY="336.0">
                      <image>
                         <Image url="@../images/logo+for+dark+ground.png" />
                      </image>
                   </ImageView>
-                  <AnchorPane layoutX="520.0" layoutY="583.0" prefHeight="131.0" prefWidth="302.0" style="-fx-background-color: green;">
+                  <AnchorPane layoutX="520.0" layoutY="583.0" prefHeight="131.0" prefWidth="302.0" style="-fx-background-color: gray;">
                      <children>
                         <Label layoutX="130.0" layoutY="74.0" text="00">
                            <font>
@@ -65,7 +69,7 @@
                         </Label>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="103.0" layoutY="583.0" prefHeight="131.0" prefWidth="302.0" style="-fx-background-color: green;">
+                  <AnchorPane layoutX="103.0" layoutY="583.0" prefHeight="131.0" prefWidth="302.0" style="-fx-background-color: gray;">
                      <children>
                         <Label layoutX="47.0" layoutY="20.0" text="Total Orders">
                            <font>
@@ -79,6 +83,14 @@
                         </Label>
                      </children>
                   </AnchorPane>
+                  <BarChart layoutX="94.0" layoutY="164.0" prefHeight="400.0" prefWidth="842.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </BarChart>
                </children>
             </AnchorPane>
             <Button layoutX="38.0" layoutY="684.0" mnemonicParsing="false" style="-fx-background-color: gray;" text="Back">
@@ -86,10 +98,13 @@
                   <Font name="System Bold" size="26.0" />
                </font>
             </Button>
-            <ImageView fitHeight="131.0" fitWidth="588.0" layoutX="-215.0" layoutY="276.0" rotate="90.0">
+            <ImageView fitHeight="131.0" fitWidth="588.0" layoutX="-215.0" layoutY="276.0" opacity="0.37" rotate="90.0">
                <image>
                   <Image url="@../images/green-food-featured.jpeg" />
                </image>
+               <effect>
+                  <Shadow />
+               </effect>
             </ImageView>
             <Button layoutX="28.0" layoutY="59.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="102.0" />
             <ImageView fitHeight="79.0" fitWidth="94.0" layoutX="32.0" layoutY="62.0">

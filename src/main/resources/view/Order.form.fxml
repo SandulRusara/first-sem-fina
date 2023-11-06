@@ -11,10 +11,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="780.0" prefWidth="1510.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.firstsemfinal.Controller.OrderformController">
    <children>
-      <AnchorPane layoutY="-8.0" prefHeight="780.0" prefWidth="1510.0">
+      <AnchorPane layoutY="-2.0" prefHeight="774.0" prefWidth="1722.0">
          <children>
             <Label layoutX="525.0" layoutY="30.0" text="Order Details Form">
                <font>
@@ -112,70 +111,5 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <Button layoutX="48.0" layoutY="694.0" mnemonicParsing="false" style="-fx-background-color: gray;" text="Back">
-         <font>
-            <Font name="System Bold" size="26.0" />
-         </font>
-      </Button>
-      <ImageView fitHeight="131.0" fitWidth="588.0" layoutX="-205.0" layoutY="286.0" rotate="90.0">
-         <image>
-            <Image url="@../images/green-food-featured.jpeg" />
-         </image>
-      </ImageView>
-      <Button layoutX="38.0" layoutY="69.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="102.0" />
-      <ImageView fitHeight="79.0" fitWidth="94.0" layoutX="42.0" layoutY="72.0">
-         <image>
-            <Image url="@../images/user.gif" />
-         </image>
-      </ImageView>
-      <Button layoutX="38.0" layoutY="300.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="102.0" />
-      <Button layoutX="38.0" layoutY="417.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="102.0" />
-      <Button layoutX="38.0" layoutY="537.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="102.0" />
-      <Label layoutX="166.0" layoutY="98.0" style="-fx-background-color: black;" text="Customer" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Button layoutX="35.0" layoutY="176.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="102.0" />
-      <ImageView fitHeight="79.0" fitWidth="94.0" layoutX="42.0" layoutY="421.0">
-         <image>
-            <Image url="@../images/employee.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="86.0" fitWidth="94.0" layoutX="39.0" layoutY="176.0">
-         <image>
-            <Image url="@../images/order.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="79.0" fitWidth="94.0" layoutX="42.0" layoutY="305.0">
-         <image>
-            <Image url="@../images/item.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="79.0" fitWidth="94.0" layoutX="42.0" layoutY="540.0">
-         <image>
-            <Image url="@../images/img.icons8.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="166.0" layoutY="205.0" style="-fx-background-color: black;" text="Order" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="166.0" layoutY="329.0" style="-fx-background-color: black;" text="Item" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="166.0" layoutY="453.0" style="-fx-background-color: black;" text="Employee" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="166.0" layoutY="573.0" style="-fx-background-color: black;" text="Supplier" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
    </children>
 </AnchorPane>
