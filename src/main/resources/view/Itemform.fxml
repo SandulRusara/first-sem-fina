@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1673.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.firstsemfinal.Controller.Itemformcontroller">
+   <children>
+      <Line endX="100.0" endY="518.0" layoutX="752.0" layoutY="401.0" startX="100.0" startY="-220.0" />
+      <JFXButton layoutX="258.0" layoutY="849.0" onAction="#btnBeveragesOnAction" prefHeight="66.0" prefWidth="265.0" style="-fx-background-color: #F9FEB4; -fx-background-radius: 50;" text="Beverages">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="1135.0" layoutY="854.0" onAction="#btnFoodsOnAction" prefHeight="66.0" prefWidth="265.0" style="-fx-background-color: #F9FEB4; -fx-background-radius: 50;" text="Foods">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="561.0" fitWidth="551.0" layoutX="132.0" layoutY="217.0">
+         <image>
+            <Image url="@../images/beverages-carbonated-drink-cold-drink-1571849-1030x631.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="561.0" fitWidth="605.0" layoutX="940.0" layoutY="222.0">
+         <image>
+            <Image url="@../images/davis_burger_fries.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

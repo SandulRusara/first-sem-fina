@@ -1,4 +1,4 @@
 package lk.ijse.firstsemfinal.Controller;
 
-public class OrderformController {
+public class CustomerPopWindowcontroller {
 }

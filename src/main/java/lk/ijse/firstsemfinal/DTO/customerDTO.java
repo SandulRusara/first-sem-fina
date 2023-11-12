@@ -11,6 +11,8 @@ import lombok.*;
 public class customerDTO {
     private Integer customerId;
     private String customerName;
+    private String custAddrss;
     private String customerContact;
-    private Integer userId;
+    private String date;
+
 }

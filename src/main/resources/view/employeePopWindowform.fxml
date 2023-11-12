@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="517.0" prefWidth="811.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.firstsemfinal.Controller.EmployeePopWindowformcontroller">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="517.0" prefWidth="811.0" style="-fx-background-color: white; -fx-background-radius: 30;">
+         <children>
+            <TextField fx:id="customerId" layoutX="29.0" layoutY="97.0" prefHeight="39.0" prefWidth="315.0" style="-fx-background-radius: 10;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="customerName" layoutX="476.0" layoutY="97.0" prefHeight="39.0" prefWidth="315.0" style="-fx-background-radius: 10;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="customeraddress" layoutX="29.0" layoutY="224.0" prefHeight="39.0" prefWidth="315.0" style="-fx-background-radius: 10;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="customerContact" layoutX="476.0" layoutY="224.0" prefHeight="39.0" prefWidth="315.0" style="-fx-background-radius: 10;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <JFXButton fx:id="updateButton" layoutX="655.0" layoutY="383.0" prefHeight="41.0" prefWidth="119.0" style="-fx-background-color: #31F301; -fx-background-radius: 30;" text="Update">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="saveButton" layoutX="505.0" layoutY="383.0" onAction="#employeesave" prefHeight="41.0" prefWidth="119.0" style="-fx-background-color: #31F301; -fx-background-radius: 30;" text="Save">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="35.0" layoutY="67.0" prefHeight="24.0" prefWidth="108.0" text="Employee Id :-">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="476.0" layoutY="67.0" prefHeight="24.0" prefWidth="119.0" text="Employee Name :-">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="190.0" prefHeight="24.0" prefWidth="137.0" text="Employee Address:- :-">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="476.0" layoutY="190.0" prefHeight="24.0" prefWidth="131.0" text="Employee Contact :-">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="customeraddress1" layoutX="22.0" layoutY="351.0" prefHeight="39.0" prefWidth="315.0" style="-fx-background-radius: 10;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="22.0" layoutY="317.0" prefHeight="24.0" prefWidth="137.0" text="Employee Nic:- :-">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

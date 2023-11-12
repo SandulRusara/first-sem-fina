@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1673.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.firstsemfinal.Controller.Employeeformcontroller">
+   <children>
+      <TableView layoutX="75.0" layoutY="245.0" prefHeight="752.0" prefWidth="1508.0">
+         <columns>
+            <TableColumn prefWidth="303.0" text="empId" />
+            <TableColumn prefWidth="264.0" text="empName" />
+            <TableColumn prefWidth="324.0" text="empAddress" />
+            <TableColumn prefWidth="316.0" text="empContact" />
+            <TableColumn prefWidth="300.0" text="empNic" />
+         </columns>
+      </TableView>
+      <Label layoutX="550.0" layoutY="37.0" text="Employee Manage Form">
+         <font>
+            <Font name="System Bold" size="49.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="1108.0" layoutY="174.0" prefHeight="54.0" prefWidth="226.0" style="-fx-background-color: rgba(9, 52, 205, 0.97); -fx-background-radius: 30;" text="Add Employee" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="1349.0" layoutY="174.0" prefHeight="54.0" prefWidth="226.0" style="-fx-background-color: red; -fx-background-radius: 30;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

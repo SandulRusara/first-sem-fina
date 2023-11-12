@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1673.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.firstsemfinal.Controller.CustomerFoamController">
+   <children>
+      <Label layoutX="464.0" layoutY="34.0" prefHeight="59.0" prefWidth="485.0" text="Customer Manage Form">
+         <font>
+            <Font name="System Bold" size="41.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="35.0" layoutY="251.0" prefHeight="742.0" prefWidth="1550.0">
+        <columns>
+          <TableColumn fx:id="idcolumn" prefWidth="169.0" text="ID" />
+          <TableColumn fx:id="namecolumn" prefWidth="351.0" text="Name" />
+            <TableColumn fx:id="addresscolumn" prefWidth="261.0" text="Address" />
+            <TableColumn fx:id="contactcolumn" prefWidth="284.0" text="Contact" />
+            <TableColumn fx:id="datecolumn" prefWidth="274.0" text="Date" />
+            <TableColumn fx:id="actionColum" prefWidth="428.0" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="addCustomerId" layoutX="1136.0" layoutY="147.0" onAction="#btnAddCustomerOnAction" prefHeight="54.0" prefWidth="226.0" style="-fx-background-color: rgba(9, 52, 205, 0.97); -fx-background-radius: 30;" text="Add Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="1371.0" layoutY="147.0" prefHeight="54.0" prefWidth="226.0" style="-fx-background-color: red; -fx-background-radius: 30;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

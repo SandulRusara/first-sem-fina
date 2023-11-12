@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class Dbconnection {
     private static Dbconnection dbconnection;
-    private Connection connection;
+    private static   Connection connection;
 
-    private Dbconnection() throws SQLException {
+    private  Dbconnection() throws SQLException {
         connection = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/BlendBuddy",
                 "root",
@@ -17,11 +17,11 @@ public class Dbconnection {
 
     }
 
-    private static Dbconnection getInstance() throws SQLException{
+    public static Dbconnection getInstance() throws SQLException{
         return(null == dbconnection) ? dbconnection = new Dbconnection() :dbconnection;
     }
 
-    public Connection getConnection(){
+    public static Connection getConnection(){
         return connection;
     }
 
