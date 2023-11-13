@@ -72,38 +72,21 @@ public class CustomerFoamController implements Initializable {
     private JFXButton saveButton;
 
     @FXML
-    private TableView<customerTM> table;
+    private  TableView<customerTM> table;
 
     @FXML
     private JFXButton updateButton;
 
 
     @FXML
-    private AnchorPane subPane;
+    private AnchorPane subpane;
 
     @FXML
     private TableColumn<customerTM,JFXButton> actionColum;
 
     private CustomerModel customerModel=new CustomerModel();
-    @FXML
-    void oncustomerSave(ActionEvent event) {
-        int id = parseInt(customerId.getText());
-        String name = customerName.getText();
-        String address = customeraddress.getText();
-        String contact = customerContact.getText();
-        String date = String.valueOf(LocalDate.now());
 
-        customerDTO customerDTO=new customerDTO(id,name,address,contact,date);
-        try {
-            boolean isSaved = customerModel.saveCustomer(customerDTO);
-            if(isSaved){
-                new Alert(Alert.AlertType.CONFIRMATION,"customer saved").show();
-            }
-        }catch (SQLException e){
-            new Alert(Alert.AlertType.ERROR, "customer not saved").show();
-        }
 
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -117,11 +100,12 @@ public class CustomerFoamController implements Initializable {
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.setResizable(false);
+        CustomerPopWindowcontroller.pane = subpane;
         stage.show();
 
     }
     public void setValues(){
-        idcolumn.setCellValueFactory(new PropertyValueFactory<customerTM,String>("custId"));
+        //idcolumn.setCellValueFactory(new PropertyValueFactory<customerTM,String>("custId"));
         namecolumn.setCellValueFactory(new PropertyValueFactory<customerTM,String>("name"));
         addresscolumn.setCellValueFactory(new PropertyValueFactory<customerTM,String>("address"));
         contactcolumn.setCellValueFactory(new PropertyValueFactory<customerTM,String>("contact"));
@@ -131,13 +115,21 @@ public class CustomerFoamController implements Initializable {
     }
     public  void loadValues(){
         ArrayList<customerDTO> arrayList = CustomerModel.getAllCustomers();
-        System.out.println(arrayList.size());
+
 
         ObservableList<customerTM> observableList = FXCollections.observableArrayList();
 
         for (int i = 0; i < arrayList.size(); i++) {
             LocalDate date = LocalDate.now();
-            customerTM customerTM = new customerTM(arrayList.get(i).getCustomerId(),arrayList.get(i).getCustomerName(),arrayList.get(i).getCustAddrss(),arrayList.get(i).getCustomerContact(),String.valueOf(date),new JFXButton("Delete"));
+            customerTM customerTM = new customerTM(
+                    arrayList.get(i).getCustomerId(),
+                    arrayList.get(i).getCustomerName(),
+                    arrayList.get(i).getCustAddrss(),
+                    arrayList.get(i).getCustomerContact(),
+                    String.valueOf(date),
+                    new JFXButton("Delete"),
+                    arrayList.get(i).getEmail()
+                    );
             observableList.add(customerTM);
 
         }

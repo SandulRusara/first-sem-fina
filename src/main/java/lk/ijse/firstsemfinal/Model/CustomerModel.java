@@ -2,6 +2,7 @@ package lk.ijse.firstsemfinal.Model;
 
 import lk.ijse.firstsemfinal.DTO.customerDTO;
 import lk.ijse.firstsemfinal.DbConnection.Dbconnection;
+import lombok.SneakyThrows;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -40,7 +41,9 @@ public class CustomerModel {
                         resultSet.getString(2),
                         resultSet.getString(3),
                         resultSet.getString(4),
-                        resultSet.getString(5));
+                        resultSet.getString(5),
+                        resultSet.getString(6));
+
 
                 arrayList.add(customerDTO);
             }
@@ -51,15 +54,16 @@ public class CustomerModel {
         return arrayList;
     }
 
-    public boolean saveCustomer(customerDTO customerDTO) throws SQLException {
+    public static boolean saveCustomer(customerDTO customerDTO) throws SQLException {
         Connection connection=Dbconnection.getInstance().getConnection();
-       PreparedStatement pstm= connection.prepareStatement("insert into customer values (?,?,?,?,?)");
+       PreparedStatement pstm= connection.prepareStatement("insert into customer values (?,?,?,?,?,?)");
 
        pstm.setInt(1,customerDTO.getCustomerId());
        pstm.setString(2,customerDTO.getCustomerName());
        pstm.setString(3,customerDTO.getCustAddrss());
        pstm.setString(4,customerDTO.getCustomerContact());
        pstm.setString(5,customerDTO.getDate());
+       pstm.setString(6,customerDTO.getEmail());
 
         boolean isSaved = pstm.executeUpdate() > 0;
 

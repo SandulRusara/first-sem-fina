@@ -38,6 +38,7 @@ public class LoginFormController {
         for (int i = 0; i < allUser.size(); i++) {
             if (allUser.get(i).getUseName().equals(uname) && allUser.get(i).getPassword().equals(pass)){
                 try {
+                    EmployeePopWindowformcontroller.UserID = allUser.get(i).getUserID();
                     Parent parent = FXMLLoader.load(getClass().getResource("/view/dashbord.form.fxml"));
                     Scene scene = new Scene(parent);
                     Stage stage = new Stage();

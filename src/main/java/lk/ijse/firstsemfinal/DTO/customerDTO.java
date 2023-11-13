@@ -14,5 +14,6 @@ public class customerDTO {
     private String custAddrss;
     private String customerContact;
     private String date;
+    private String email;
 
 }

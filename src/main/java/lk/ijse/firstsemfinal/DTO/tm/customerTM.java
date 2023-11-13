@@ -16,4 +16,5 @@ public class customerTM {
     private String contact;
     private String date;
     private JFXButton button;
+    private String email;
 }
