@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="850" prefWidth="1378" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.firstsemfinal.Controller.Foodsformcontroller">
    <children>
       <ImageView fitHeight="850.0" fitWidth="1378.0" opacity="0.33">
@@ -18,21 +17,17 @@
             <Image url="@../images/davis_burger_fries.jpg" />
          </image>
       </ImageView>
-      <TextField layoutX="34.0" layoutY="306.0" prefHeight="41.0" prefWidth="387.0" promptText="Food Id">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </TextField>
-      <JFXButton layoutX="41.0" layoutY="783.0" prefHeight="41.0" prefWidth="101.0" style="-fx-background-color: #31F301;" text="Save">
+      <JFXButton layoutX="107.0" layoutY="564.0" prefHeight="41.0" prefWidth="101.0" style="-fx-background-color: #31F301;" text="Save">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </JFXButton>
       <TableView layoutX="455.0" layoutY="59.0" prefHeight="765.0" prefWidth="899.0">
          <columns>
-            <TableColumn prefWidth="309.0" text="foodId" />
-            <TableColumn prefWidth="293.0" text="foodName" />
-            <TableColumn prefWidth="296.0" text="foodPrice" />
+            <TableColumn prefWidth="252.0" text="foodId" />
+            <TableColumn prefWidth="231.0" text="foodName" />
+            <TableColumn prefWidth="215.0" text="foodPrice" />
+            <TableColumn prefWidth="200.0" />
          </columns>
       </TableView>
       <Label layoutX="136.0" layoutY="48.0" opacity="0.38" prefHeight="85.0" prefWidth="196.0" style="-fx-background-color: white;" text="Foods">
@@ -40,22 +35,17 @@
             <Font size="41.0" />
          </font>
       </Label>
-      <TextField layoutX="34.0" layoutY="405.0" prefHeight="41.0" prefWidth="387.0" promptText="Food Name">
+      <TextField layoutX="34.0" layoutY="302.0" prefHeight="41.0" prefWidth="387.0" promptText="Food Name">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField layoutX="34.0" layoutY="508.0" prefHeight="41.0" prefWidth="387.0" promptText="Food Price">
+      <TextField layoutX="34.0" layoutY="405.0" prefHeight="41.0" prefWidth="387.0" promptText="Food Price">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <JFXButton layoutX="169.0" layoutY="783.0" prefHeight="41.0" prefWidth="101.0" style="-fx-background-color: #31F301;" text="Update">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="305.0" layoutY="783.0" prefHeight="41.0" prefWidth="101.0" style="-fx-background-color: red;" text="Delete">
+      <JFXButton layoutX="235.0" layoutY="564.0" prefHeight="41.0" prefWidth="101.0" style="-fx-background-color: #31F301;" text="Update">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

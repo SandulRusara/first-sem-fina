@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -106,6 +107,19 @@ public class Employeeformcontroller implements Initializable {
                 observableList.get(i).getDeleteColum().setStyle("-fx-background-color: rgba(175,108,108,1)");
                 observableList.get(i).getDeleteColum().setAlignment(Pos.CENTER);
                 observableList.get(i).getDeleteColum().setTextFill(Color.WHITE);
+            }
+            for (int i = 0; i < observableList.size(); i++) {
+                int empID = Integer.parseInt(observableList.get(i).getIdcolum());
+                observableList.get(i).getDeleteColum().setOnAction(event-> {
+                    try {
+                        boolean b = EmployeeModle.deleteButton(empID);
+                        if (b){
+                            new Alert(Alert.AlertType.CONFIRMATION,"Employee Deleted").show();
+                        }
+                    } catch (SQLException e) {
+                        throw new RuntimeException(e);
+                    }
+                });
             }
 
         } catch (SQLException e) {

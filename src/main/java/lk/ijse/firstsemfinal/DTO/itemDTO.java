@@ -6,10 +6,11 @@ import lombok.*;
 @AllArgsConstructor
 @Getter
 @Setter
-@ToString
+@Data
 
 public class itemDTO {
     private Integer itemId;
     private String itemCatagory;
     private String itemName;
+    private String price;
 }

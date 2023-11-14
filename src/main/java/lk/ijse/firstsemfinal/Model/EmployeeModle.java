@@ -17,7 +17,13 @@ public class EmployeeModle {
             PreparedStatement pstm = connection.prepareStatement("select * from employee");
             ResultSet resultSet = pstm.executeQuery();
             while (resultSet.next()) {
-                employeeDTO employeeDTO = new employeeDTO(resultSet.getInt(1),resultSet.getString(2),resultSet.getString(3),resultSet.getString(4),resultSet.getInt(5),resultSet.getString(6));
+                employeeDTO employeeDTO = new employeeDTO(
+                        resultSet.getInt(1),
+                        resultSet.getString(2),
+                        resultSet.getString(3),
+                        resultSet.getString(4),
+                        resultSet.getInt(5),
+                        resultSet.getString(6));
                 arrayList.add(employeeDTO);
             }
 
@@ -41,5 +47,18 @@ public class EmployeeModle {
 
         boolean isSaved = pstm.executeUpdate()>0;
         return isSaved;
+    }
+    public static boolean deleteButton(int employeeid) throws SQLException {
+        try {
+            Connection connection= Dbconnection.getInstance().getConnection();
+            PreparedStatement pstm= connection.prepareStatement("delete from employee where employeeId = ?");
+            pstm.setInt(1,employeeid);
+            int i = pstm.executeUpdate();
+            return i>0;
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+       return false;
+
     }
 }

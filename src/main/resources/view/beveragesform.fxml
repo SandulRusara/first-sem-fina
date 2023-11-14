@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -10,7 +11,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="850" prefWidth="1378" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.firstsemfinal.Controller.Beveragesformcontroller">
    <children>
       <ImageView fitHeight="850.0" fitWidth="1378.0" opacity="0.28">
@@ -18,47 +18,37 @@
             <Image url="@../images/photo-1531025503751-fedbb2ad9de5.jpg" />
          </image>
       </ImageView>
-      <JFXButton layoutX="31.0" layoutY="773.0" prefHeight="41.0" prefWidth="101.0" style="-fx-background-color: #31F301;" text="Save">
+      <JFXButton layoutX="165.0" layoutY="642.0" onAction="#btnSaveOnAction" prefHeight="41.0" prefWidth="101.0" style="-fx-background-color: #31F301;" text="Save">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </JFXButton>
-      <TableView layoutX="445.0" layoutY="49.0" prefHeight="765.0" prefWidth="899.0">
+      <TableView fx:id="table" layoutX="418.0" layoutY="65.0" prefHeight="744.0" prefWidth="919.0">
          <columns>
-            <TableColumn prefWidth="309.0" text="juiceId" />
-            <TableColumn prefWidth="293.0" text="juice Name" />
-            <TableColumn prefWidth="296.0" text="juice Price" />
+            <TableColumn fx:id="idcolum" prefWidth="129.0" text="Id" />
+            <TableColumn fx:id="nameColum" prefWidth="155.0" text="Name" />
+            <TableColumn fx:id="priceColum" prefWidth="145.0" text="Price" />
+            <TableColumn fx:id="categoriescolum" prefWidth="187.0" text="categories" />
+            <TableColumn fx:id="deleteButton1" minWidth="0.0" prefWidth="158.0" />
+            <TableColumn fx:id="updateButton" prefWidth="144.0" />
          </columns>
       </TableView>
-      <TextField layoutX="37.0" layoutY="339.0" prefHeight="41.0" prefWidth="387.0" promptText="juice Id">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </TextField>
       <Label layoutX="126.0" layoutY="38.0" opacity="0.38" prefHeight="85.0" prefWidth="196.0" style="-fx-background-color: white;" text="Beverages">
          <font>
             <Font size="41.0" />
          </font>
       </Label>
-      <TextField layoutX="37.0" layoutY="450.0" prefHeight="41.0" prefWidth="387.0" promptText="juice Name">
+      <TextField fx:id="txtName" layoutX="15.0" layoutY="280.0" prefHeight="41.0" prefWidth="387.0" promptText="juice Name">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField layoutX="31.0" layoutY="567.0" prefHeight="41.0" prefWidth="387.0" promptText="juice Price">
+      <TextField fx:id="txtPrice" layoutX="14.0" layoutY="391.0" prefHeight="41.0" prefWidth="387.0" promptText="juice Price">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <JFXButton layoutX="161.0" layoutY="773.0" prefHeight="41.0" prefWidth="101.0" style="-fx-background-color: #31F301;" text="Update">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="298.0" layoutY="773.0" prefHeight="41.0" prefWidth="101.0" style="-fx-background-color: red;" text="Delete">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </JFXButton>
+      <ComboBox fx:id="txtTableCategories" layoutX="418.0" layoutY="18.0" prefHeight="41.0" prefWidth="290.0" style="-fx-background-color: white; -fx-background-radius: 30;" />
+      <ComboBox fx:id="txtJuiceCetagories" layoutX="12.0" layoutY="517.0" prefHeight="41.0" prefWidth="387.0" />
    </children>
 </AnchorPane>
