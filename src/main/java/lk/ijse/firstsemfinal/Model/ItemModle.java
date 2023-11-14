@@ -14,7 +14,7 @@ public class ItemModle {
        Connection connection= Dbconnection.getInstance().getConnection();
        PreparedStatement preparedStatement=connection.prepareStatement("insert into item values(?,?,?,?)");
        preparedStatement.setInt(1,itemDto.getItemId());
-       preparedStatement.setString(2,itemDto.getItemCatagory());
+       preparedStatement.setString(2,itemDto.getItemCategory());
        preparedStatement.setString(3,itemDto.getItemName());
        preparedStatement.setString(4,itemDto.getPrice());
 

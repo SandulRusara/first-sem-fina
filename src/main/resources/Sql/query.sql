@@ -1,4 +1,5 @@
-create database BlendBuddy;
+drop database if exists BlendBuddy;
+create database if not exists BlendBuddy;
 
 use BlendBuddy;
 
@@ -39,8 +40,9 @@ create table orders(
 
 create table item(
     itemId int(20) not null auto_increment primary key ,
-    itemCatagory varchar(40),
-    itemName varchar(35)
+    itemCategory varchar(40),
+    itemName varchar(35),
+    itemPrice varchar(40)
 );
 
 create table orderItemDetails(
@@ -82,4 +84,5 @@ create table supply(
     qty int(100)
 );
 
+insert into user values (0,'a','a','a');
 

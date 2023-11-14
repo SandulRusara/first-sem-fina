@@ -4,13 +4,13 @@ import lombok.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
 @Data
 
 public class itemDTO {
     private Integer itemId;
-    private String itemCatagory;
+    private String itemCategory;
     private String itemName;
     private String price;
+
+
 }
