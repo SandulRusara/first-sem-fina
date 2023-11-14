@@ -45,4 +45,17 @@ public class ItemModle {
         }
         return arrayList;
     }
+    public static boolean deleteButton(int Id) throws SQLException {
+        try {
+            Connection connection= Dbconnection.getInstance().getConnection();
+            PreparedStatement pstm = connection.prepareStatement("delete from item where itemId = ?");
+            pstm.setInt(1,Id);
+            int i = pstm.executeUpdate();
+            return i>0;
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return false;
+
+    }
 }

@@ -6,13 +6,13 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.geometry.Pos;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.paint.Color;
 import lk.ijse.firstsemfinal.DTO.itemDTO;
 import lk.ijse.firstsemfinal.DTO.tm.BeveragesTm;
+import lk.ijse.firstsemfinal.Model.EmployeeModle;
 import lk.ijse.firstsemfinal.Model.ItemModle;
 
 import java.net.URL;
@@ -63,6 +63,10 @@ public class Beveragesformcontroller implements Initializable {
 
         itemDTO itemDTO=new itemDTO(0,cat,name,price);
         boolean b = ItemModle.saveItem(itemDTO);
+        if (b){
+            new Alert(Alert.AlertType.CONFIRMATION,"Item Deleted");
+            loadValues();
+        }
         txtName.setText("");
         txtPrice.setText("");
 
@@ -95,8 +99,27 @@ public class Beveragesformcontroller implements Initializable {
         }
 
         table.setItems(object);
-
+        for (int i = 0; i < object.size(); i++) {
+            object.get(i).getDeleteButton().setStyle("-fx-background-color: rgba(175,108,108,1)");
+            object.get(i).getDeleteButton().setAlignment(Pos.CENTER);
+            object.get(i).getDeleteButton().setTextFill(Color.WHITE);
+        }
+        for (int i = 0; i < object.size(); i++) {
+            int ID = Integer.parseInt(object.get(i).getId());
+            object.get(i).getDeleteButton().setOnAction(event -> {
+                try {
+                    boolean b = ItemModle.deleteButton(ID);
+                    if (b){
+                        new Alert(Alert.AlertType.CONFIRMATION,"Employee succefully Deleted");
+                        loadValues();
+                    }
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
+            });
+        }
     }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

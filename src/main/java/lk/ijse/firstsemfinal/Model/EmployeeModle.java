@@ -51,7 +51,7 @@ public class EmployeeModle {
     public static boolean deleteButton(int employeeid) throws SQLException {
         try {
             Connection connection= Dbconnection.getInstance().getConnection();
-            PreparedStatement pstm= connection.prepareStatement("delete from employee where employeeId = ?");
+            PreparedStatement pstm = connection.prepareStatement("delete from employee where employeeId = ?");
             pstm.setInt(1,employeeid);
             int i = pstm.executeUpdate();
             return i>0;
