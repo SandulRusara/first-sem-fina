@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="1080.0" prefWidth="1673.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.firstsemfinal.Controller.OdersformController">
+   <children>
+      <TableView layoutX="85.0" layoutY="363.0" prefHeight="615.0" prefWidth="1492.0">
+        <columns>
+          <TableColumn prefWidth="356.0" text="Id" />
+          <TableColumn prefWidth="365.0" text="Contact" />
+            <TableColumn prefWidth="391.0" text="Nic" />
+            <TableColumn prefWidth="379.0" text="Payment" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

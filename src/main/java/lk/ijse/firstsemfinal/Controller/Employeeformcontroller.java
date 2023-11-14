@@ -115,6 +115,7 @@ public class Employeeformcontroller implements Initializable {
                         boolean b = EmployeeModle.deleteButton(empID);
                         if (b){
                             new Alert(Alert.AlertType.CONFIRMATION,"Employee Deleted").show();
+                            loadValues();
                         }
                     } catch (SQLException e) {
                         throw new RuntimeException(e);
