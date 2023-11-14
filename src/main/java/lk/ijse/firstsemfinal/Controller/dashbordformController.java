@@ -47,6 +47,7 @@ public class dashbordformController implements Initializable {
     void btnItemOnAction(ActionEvent event) throws IOException {
         Parent parent=FXMLLoader.load(this.getClass().getResource("/view/Itemform.fxml"));
         subPane.getChildren().setAll(parent);
+        BevergedUpdatefromController.apane = subPane;
 
     }
 

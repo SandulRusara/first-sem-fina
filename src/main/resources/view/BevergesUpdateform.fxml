@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="527.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.firstsemfinal.Controller.BevergedUpdatefromController">
+   <children>
+      <TextField fx:id="bevergesName" layoutX="34.0" layoutY="109.0" prefHeight="39.0" prefWidth="315.0" style="-fx-background-radius: 10;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="bevergesPrice" layoutX="421.0" layoutY="107.0" prefHeight="39.0" prefWidth="315.0" style="-fx-background-radius: 10;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <JFXComboBox fx:id="categoryCombo" layoutX="39.0" layoutY="244.0" prefHeight="39.0" prefWidth="315.0" />
+      <Label layoutX="39.0" layoutY="75.0" prefHeight="24.0" prefWidth="137.0" text="Name">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="421.0" layoutY="75.0" prefHeight="24.0" prefWidth="137.0" text="Price">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="220.0" prefHeight="24.0" prefWidth="137.0" text="Category">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="canselButton" layoutX="525.0" layoutY="413.0" onAction="#onCanselClick" prefHeight="41.0" prefWidth="119.0" style="-fx-background-color: #31F301; -fx-background-radius: 30;" text="Cansel">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="saveButton" layoutX="663.0" layoutY="413.0" onAction="#btnSaveOnAction" prefHeight="41.0" prefWidth="119.0" style="-fx-background-color: #31F301; -fx-background-radius: 30;" text="Save">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

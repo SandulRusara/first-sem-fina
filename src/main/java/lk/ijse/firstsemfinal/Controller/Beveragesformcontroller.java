@@ -5,16 +5,22 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 import lk.ijse.firstsemfinal.DTO.itemDTO;
 import lk.ijse.firstsemfinal.DTO.tm.BeveragesTm;
 import lk.ijse.firstsemfinal.Model.EmployeeModle;
 import lk.ijse.firstsemfinal.Model.ItemModle;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -54,6 +60,10 @@ public class Beveragesformcontroller implements Initializable {
 
     @FXML
     private TableColumn<BeveragesTm, JFXButton> updateButton;
+
+    @FXML
+    private AnchorPane apane;
+
 
     @FXML
     void btnSaveOnAction(ActionEvent event) throws SQLException {
@@ -103,6 +113,8 @@ public class Beveragesformcontroller implements Initializable {
             object.get(i).getDeleteButton().setStyle("-fx-background-color: rgba(175,108,108,1)");
             object.get(i).getDeleteButton().setAlignment(Pos.CENTER);
             object.get(i).getDeleteButton().setTextFill(Color.WHITE);
+            object.get(i).getUpdateButton().setStyle("-fx-background-color: rgba(96, 120, 205, 0.97)");
+            object.get(i).getUpdateButton().setTextFill(Color.WHITE);
         }
         for (int i = 0; i < object.size(); i++) {
             int ID = Integer.parseInt(object.get(i).getId());
@@ -116,6 +128,28 @@ public class Beveragesformcontroller implements Initializable {
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
                 }
+            });
+            String id = object.get(i).getId();
+            String name = object.get(i).getName();
+            String price = object.get(i).getPrice();
+            String category = object.get(i).getCategory();
+            object.get(i).getUpdateButton().setOnAction(event ->{
+                BevergedUpdatefromController.itemID = Integer.parseInt(id);
+                BevergedUpdatefromController.itemName = name;
+                BevergedUpdatefromController.itemPrice = price;
+                BevergedUpdatefromController.itemcat = category;
+                BevergedUpdatefromController.apane =this.apane;
+                Parent parent = null;
+                try {
+                    parent = FXMLLoader.load(getClass().getResource("/view/BevergesUpdateform.fxml"));
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                Scene scene = new Scene(parent);
+                Stage stage = new Stage();
+                stage.setResizable(false);
+                stage.setScene(scene);
+                stage.show();
             });
         }
     }

@@ -10,6 +10,23 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class ItemModle {
+    public static boolean updateItem(itemDTO itemDTO){
+        try {
+            Connection connection = Dbconnection.getInstance().getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(" update item set itemCategory = ? , itemName = ? , itemPrice = ? where itemId = ?");
+            preparedStatement.setString(1,itemDTO.getItemCategory());
+            preparedStatement.setString(2,itemDTO.getItemName());
+            preparedStatement.setString(3,itemDTO.getPrice());
+            preparedStatement.setInt(4,itemDTO.getItemId());
+
+            int i = preparedStatement.executeUpdate();
+            return i > 0;
+
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return false;
+    }
     public static boolean saveItem(itemDTO itemDto) throws SQLException {
        Connection connection= Dbconnection.getInstance().getConnection();
        PreparedStatement preparedStatement=connection.prepareStatement("insert into item values(?,?,?,?)");

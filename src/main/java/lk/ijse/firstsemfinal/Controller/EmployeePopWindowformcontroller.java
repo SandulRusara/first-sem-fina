@@ -3,6 +3,8 @@ package lk.ijse.firstsemfinal.Controller;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -49,6 +51,9 @@ public class EmployeePopWindowformcontroller {
         boolean b = EmployeeModle.saveEmployee(employeeDTO);
         Stage stage = (Stage) updateButton.getScene().getWindow();
         stage.close();
+        Parent parent = FXMLLoader.load(getClass().getResource("/view/employeeform.fxml"));
+        pane.getChildren().clear();
+        pane.getChildren().add(parent);
 
     }
 

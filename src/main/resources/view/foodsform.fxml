@@ -23,14 +23,14 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </JFXButton>
-      <TableView layoutX="457.0" layoutY="115.0" prefHeight="675.0" prefWidth="868.0">
+      <TableView fx:id="table" layoutX="457.0" layoutY="115.0" prefHeight="675.0" prefWidth="868.0">
          <columns>
-            <TableColumn fx:id="txtId" prefWidth="155.0" text="Id" />
-            <TableColumn fx:id="txtName" prefWidth="160.0" text="Name" />
-            <TableColumn fx:id="txtPrice" prefWidth="186.0" text="Price" />
-            <TableColumn fx:id="txtCategories" minWidth="0.0" prefWidth="158.0" text="categories" />
-            <TableColumn fx:id="deleteButton" minWidth="0.0" prefWidth="107.0" />
-            <TableColumn fx:id="updateButton" minWidth="0.0" prefWidth="101.0" />
+            <TableColumn fx:id="txtIdcolumn" prefWidth="155.0" text="Id" />
+            <TableColumn fx:id="txtNamecolumn" prefWidth="160.0" text="Name" />
+            <TableColumn fx:id="txtPricecolumn" prefWidth="186.0" text="Price" />
+            <TableColumn fx:id="txtCategoriescolumn" minWidth="0.0" prefWidth="158.0" text="categories" />
+            <TableColumn fx:id="deleteButtoncolumn" minWidth="0.0" prefWidth="107.0" />
+            <TableColumn fx:id="updateButtoncolumn" minWidth="0.0" prefWidth="101.0" />
          </columns>
       </TableView>
       <Label layoutX="136.0" layoutY="48.0" opacity="0.38" prefHeight="85.0" prefWidth="196.0" style="-fx-background-color: white;" text="Foods">
@@ -38,7 +38,7 @@
             <Font size="41.0" />
          </font>
       </Label>
-      <TextField fx:id="txtId" layoutX="34.0" layoutY="302.0" prefHeight="41.0" prefWidth="387.0" promptText="Food Name">
+      <TextField fx:id="txtName" layoutX="34.0" layoutY="302.0" prefHeight="41.0" prefWidth="387.0" promptText="Food Name">
          <font>
             <Font size="18.0" />
          </font>
