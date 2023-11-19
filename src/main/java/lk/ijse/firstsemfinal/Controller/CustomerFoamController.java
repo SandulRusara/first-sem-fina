@@ -1,7 +1,6 @@
 package lk.ijse.firstsemfinal.Controller;
 
 import com.jfoenix.controls.JFXButton;
-import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -18,15 +17,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 import lk.ijse.firstsemfinal.DTO.customerDTO;
 import lk.ijse.firstsemfinal.DTO.tm.customerTM;
-import lk.ijse.firstsemfinal.Model.CustomerModel;
+import lk.ijse.firstsemfinal.Model.CustomerModle;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -84,7 +81,7 @@ public class CustomerFoamController implements Initializable {
     @FXML
     private TableColumn<customerTM,JFXButton> actionColum;
 
-    private CustomerModel customerModel=new CustomerModel();
+    private CustomerModle customerModel=new CustomerModle();
 
 
 
@@ -114,7 +111,7 @@ public class CustomerFoamController implements Initializable {
 
     }
     public  void loadValues(){
-        ArrayList<customerDTO> arrayList = CustomerModel.getAllCustomers();
+        ArrayList<customerDTO> arrayList = CustomerModle.getAllCustomers();
 
 
         ObservableList<customerTM> observableList = FXCollections.observableArrayList();
@@ -143,7 +140,7 @@ public class CustomerFoamController implements Initializable {
         for (int i = 0; i < observableList.size(); i++) {
             int custId = observableList.get(i).getCustId();
             observableList.get(i).getButton().setOnAction(event->{
-                boolean b = CustomerModel.deleteButton(custId);
+                boolean b = CustomerModle.deleteButton(custId);
                 if (b){
                     new Alert(Alert.AlertType.CONFIRMATION,"customer deleted").show();
                     loadValues();

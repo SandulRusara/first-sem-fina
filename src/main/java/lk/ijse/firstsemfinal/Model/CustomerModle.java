@@ -2,16 +2,14 @@ package lk.ijse.firstsemfinal.Model;
 
 import lk.ijse.firstsemfinal.DTO.customerDTO;
 import lk.ijse.firstsemfinal.DbConnection.Dbconnection;
-import lombok.SneakyThrows;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class CustomerModel {
+public class CustomerModle {
   /*  public static boolean savaCustomer(customerDTO customerDTO){
         try {
             Connection connection = Dbconnection.getInstance().getConnection();

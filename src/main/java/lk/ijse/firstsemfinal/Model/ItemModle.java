@@ -29,28 +29,31 @@ public class ItemModle {
     }
     public static boolean saveItem(itemDTO itemDto) throws SQLException {
        Connection connection= Dbconnection.getInstance().getConnection();
-       PreparedStatement preparedStatement=connection.prepareStatement("insert into item values(?,?,?,?)");
+       PreparedStatement preparedStatement=connection.prepareStatement("insert into item values(?,?,?,?,?)");
        preparedStatement.setInt(1,itemDto.getItemId());
        preparedStatement.setString(2,itemDto.getItemCategory());
        preparedStatement.setString(3,itemDto.getItemName());
        preparedStatement.setString(4,itemDto.getPrice());
+       preparedStatement.setString(5,itemDto.getType());
 
        boolean isSaved=preparedStatement.executeUpdate()>0;
        return isSaved;
     }
 
-    public static ArrayList<itemDTO> getAllItem() throws SQLException {
+    public static ArrayList<itemDTO> getAllItem(String itemType) throws SQLException {
         ArrayList<itemDTO>arrayList=new ArrayList<>();
         try {
             Connection connection=Dbconnection.getInstance().getConnection();
-            PreparedStatement pstm=connection.prepareStatement("select * from item");
+            PreparedStatement pstm=connection.prepareStatement(" select * from item where type=?");
+            pstm.setString(1,itemType);
             ResultSet resultSet=pstm.executeQuery();
             while (resultSet.next()){
                 itemDTO itemDTO=new itemDTO(
                         resultSet.getInt(1),
                         resultSet.getString(2),
                         resultSet.getString(3),
-                        resultSet.getString(4)
+                        resultSet.getString(4),
+                        resultSet.getString(5)
 
                 );
                 arrayList.add(itemDTO);

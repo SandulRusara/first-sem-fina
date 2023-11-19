@@ -20,20 +20,12 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class BevergedUpdatefromController implements Initializable {
+public class FoodsUpdateformController implements Initializable {
     public static int itemID;
     public static String itemName;
     public static String itemPrice;
     public static String itemcat;
-    public static AnchorPane apane;
-
-
-    @FXML
-    private TextField bevergesName;
-
-    @FXML
-    private TextField bevergesPrice;
-
+    public static AnchorPane pane;
     @FXML
     private JFXButton canselButton;
 
@@ -41,30 +33,37 @@ public class BevergedUpdatefromController implements Initializable {
     private JFXComboBox<String> categoryCombo;
 
     @FXML
+    private TextField foodsName;
+
+    @FXML
+    private TextField foodsPrice;
+
+    @FXML
     private JFXButton saveButton;
 
     @FXML
     void btnSaveOnAction(ActionEvent event) {
-        int item= itemID;
-        String nameText = bevergesName.getText();
-        String priceText = bevergesPrice.getText();
-        String cat = categoryCombo.getValue();
-        String type = "Drink";
+        int itemID1 = itemID;
+        String name = foodsName.getText();
+        String price = foodsPrice.getText();
+        Object cat = categoryCombo.getValue();
+        String type = "Food";
 
-        itemDTO itemDTO = new itemDTO(item,cat,nameText,priceText,type);
-        boolean b = ItemModle.updateItem(itemDTO);
-        if (b){
-            new Alert(Alert.AlertType.CONFIRMATION,"Update successfully");
+        itemDTO itemDTO=new itemDTO(itemID1, (String) cat,name,price,type);
+        boolean b=ItemModle.updateItem(itemDTO);
+        if(b){
+            new Alert(Alert.AlertType.CONFIRMATION,"update successfully");
             Stage stage = (Stage) saveButton.getScene().getWindow();
             stage.close();
             Parent parent = null;
             try {
-                parent = FXMLLoader.load(getClass().getResource("/view/beveragesform.fxml"));
-                apane.getChildren().clear();
-                apane.getChildren().add(parent);
+                parent = FXMLLoader.load(getClass().getResource("/view/foodsform.fxml"));
+                pane.getChildren().clear();
+                pane.getChildren().add(parent);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+
         }
 
     }
@@ -78,13 +77,10 @@ public class BevergedUpdatefromController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ObservableList<String> observableList = FXCollections.observableArrayList("Fresh fruit juice","Lassi","Beverage and Juice powder","Mojitho","Milkshake");
+        ObservableList<String> observableList = FXCollections.observableArrayList("Hot Bun", "Lenumes", "Beked goods", "Meat", "Snacks");
         categoryCombo.setItems(observableList);
-        bevergesName.setText(itemName);
-        bevergesPrice.setText(itemPrice);
+        foodsPrice.setText(itemName);
+        foodsPrice.setText(itemPrice);
         categoryCombo.setValue(itemcat);
-
-
-
     }
 }

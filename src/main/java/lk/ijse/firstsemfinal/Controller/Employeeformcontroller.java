@@ -17,11 +17,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import lk.ijse.firstsemfinal.DTO.customerDTO;
 import lk.ijse.firstsemfinal.DTO.employeeDTO;
 import lk.ijse.firstsemfinal.DTO.tm.EmployeeTM;
-import lk.ijse.firstsemfinal.DTO.tm.customerTM;
-import lk.ijse.firstsemfinal.Model.CustomerModel;
 import lk.ijse.firstsemfinal.Model.EmployeeModle;
 
 import java.io.IOException;

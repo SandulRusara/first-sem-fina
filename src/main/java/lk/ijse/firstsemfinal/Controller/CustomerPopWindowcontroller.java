@@ -9,7 +9,6 @@ import javafx.stage.Stage;
 import lk.ijse.firstsemfinal.DTO.customerDTO;
 
 import java.io.IOException;
-import java.sql.Date;
 import java.sql.SQLException;
 import java.time.LocalDate;
 
@@ -17,10 +16,9 @@ import static java.lang.Integer.parseInt;
 
 
 import com.jfoenix.controls.JFXButton;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
-import lk.ijse.firstsemfinal.Model.CustomerModel;
+import lk.ijse.firstsemfinal.Model.CustomerModle;
 
 public class CustomerPopWindowcontroller {
     public static AnchorPane pane;
@@ -56,7 +54,7 @@ public class CustomerPopWindowcontroller {
         customerDTO customerDTO = new customerDTO(id,name,address,contact,dat,email);
         boolean b = false ;
         try {
-             b = CustomerModel.saveCustomer(customerDTO);
+             b = CustomerModle.saveCustomer(customerDTO);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

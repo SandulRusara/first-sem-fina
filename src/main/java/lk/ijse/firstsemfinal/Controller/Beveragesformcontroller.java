@@ -70,8 +70,9 @@ public class Beveragesformcontroller implements Initializable {
         String cat = txtJuiceCetagories.getValue();
         String name = txtName.getText();
         String price = txtPrice.getText();
+        String type = "Drink";
 
-        itemDTO itemDTO=new itemDTO(0,cat,name,price);
+        itemDTO itemDTO=new itemDTO(0,cat,name,price,type);
         boolean b = ItemModle.saveItem(itemDTO);
         if (b){
             new Alert(Alert.AlertType.CONFIRMATION,"Item Deleted");
@@ -92,7 +93,7 @@ public class Beveragesformcontroller implements Initializable {
 
     }
     public void loadValues() throws SQLException {
-        ArrayList<itemDTO> allItem = ItemModle.getAllItem();
+        ArrayList<itemDTO> allItem = ItemModle.getAllItem("Drink");
         ObservableList<BeveragesTm> object = FXCollections.observableArrayList();
 
         for (int i = 0; i < allItem.size(); i++) {
