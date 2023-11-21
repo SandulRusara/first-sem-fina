@@ -7,6 +7,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
@@ -29,6 +31,9 @@ public class dashbordformController implements Initializable {
 
     @FXML
     private AnchorPane subPane;
+
+    @FXML
+    private BarChart<String, Integer> barChart;
 
 
     @FXML
@@ -59,6 +64,7 @@ public class dashbordformController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         Parent root = null;
         try {
             root = FXMLLoader.load(getClass().getResource("/view/mainform.fxml"));
@@ -95,4 +101,5 @@ public class dashbordformController implements Initializable {
         Parent parent=FXMLLoader.load(this.getClass().getResource("/view/mainform.fxml"));
         subPane.getChildren().setAll(parent);
     }
+
 }

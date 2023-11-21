@@ -165,6 +165,7 @@ public class Beveragesformcontroller implements Initializable {
             loadValues();
         } catch (SQLException e) {
             throw new RuntimeException(e);
+
         }
     }
 }

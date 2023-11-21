@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="1080.0" prefWidth="1673.0" style="-fx-background-color: rgba(232, 232, 233, 0.97);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.firstsemfinal.Controller.mainformcontroller">
    <children>
-      <BarChart layoutX="40.0" layoutY="400.0" prefHeight="594.0" prefWidth="1181.0">
+      <BarChart fx:id="barChart" layoutX="40.0" layoutY="400.0" prefHeight="594.0" prefWidth="1181.0">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>

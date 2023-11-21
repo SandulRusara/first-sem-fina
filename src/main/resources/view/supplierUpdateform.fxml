@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pane" prefHeight="517.0" prefWidth="811.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.firstsemfinal.Controller.SupplierPopWindowformcontroller">
+<AnchorPane prefHeight="517.0" prefWidth="811.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.firstsemfinal.Controller.SupplierUpdateformcontroller">
    <children>
-      <AnchorPane prefHeight="527.0" prefWidth="821.0" style="-fx-background-color: white; -fx-background-radius: 30;">
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="527.0" prefWidth="821.0" style="-fx-background-color: white; -fx-background-radius: 30;">
          <children>
             <TextField fx:id="txtName" layoutX="24.0" layoutY="97.0" prefHeight="39.0" prefWidth="315.0" style="-fx-background-radius: 10;">
                <font>
@@ -25,7 +25,7 @@
                   <Font size="18.0" />
                </font>
             </TextField>
-            <JFXButton fx:id="saveButton" layoutX="626.0" layoutY="440.0" onAction="#btnSupplierSaveOnAction" prefHeight="41.0" prefWidth="119.0" style="-fx-background-color: #31F301; -fx-background-radius: 30;" text="Save">
+            <JFXButton fx:id="saveButton" layoutX="664.0" layoutY="453.0" onAction="#btnSupplierSaveOnAction" prefHeight="41.0" prefWidth="119.0" style="-fx-background-color: #31F301; -fx-background-radius: 30;" text="Save">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -45,6 +45,11 @@
                   <Font name="System Bold Italic" size="13.0" />
                </font>
             </Label>
+            <JFXButton layoutX="528.0" layoutY="453.0" onAction="#btnSupplierCanselOnAction" prefHeight="41.0" prefWidth="119.0" style="-fx-background-color: #31F301; -fx-background-radius: 30;" text="Cansel">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
          </children>
       </AnchorPane>
    </children>

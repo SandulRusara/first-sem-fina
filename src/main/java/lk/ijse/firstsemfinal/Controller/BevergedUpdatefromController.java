@@ -84,7 +84,5 @@ public class BevergedUpdatefromController implements Initializable {
         bevergesPrice.setText(itemPrice);
         categoryCombo.setValue(itemcat);
 
-
-
     }
 }

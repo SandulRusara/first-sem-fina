@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="subPane" prefHeight="1080.0" prefWidth="1673.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.firstsemfinal.Controller.Employeeformcontroller">
+<AnchorPane fx:id="subPane" prefHeight="1080.0" prefWidth="1673.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.firstsemfinal.Controller.Employeeformcontroller">
    <children>
-      <TableView fx:id="table" layoutX="75.0" layoutY="252.0" prefHeight="745.0" prefWidth="1550.0">
+      <TableView fx:id="table" layoutX="75.0" layoutY="252.0" prefHeight="745.0" prefWidth="1550.0" stylesheets="@../css/table.css">
          <columns>
             <TableColumn fx:id="idcolum" prefWidth="226.0" text="Id" />
             <TableColumn fx:id="nameColum" prefWidth="224.0" text="Name" />

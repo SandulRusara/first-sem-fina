@@ -2,7 +2,6 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -61,11 +60,6 @@
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></JFXButton>
-            <TextField layoutX="30.0" layoutY="149.0" prefHeight="25.0" prefWidth="191.0" promptText="Search" style="-fx-background-color: gray; -fx-background-radius: 20;">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextField>
             <ImageView fitHeight="37.0" fitWidth="33.0" layoutX="28.0" layoutY="561.0">
                <image>
                   <Image url="@../images/emp.png.png" />
