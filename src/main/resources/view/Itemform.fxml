@@ -20,14 +20,14 @@
             <Font size="36.0" />
          </font>
       </JFXButton>
-      <ImageView fitHeight="561.0" fitWidth="551.0" layoutX="132.0" layoutY="217.0">
+      <ImageView fitHeight="517.0" fitWidth="572.0" layoutX="982.0" layoutY="253.0">
          <image>
-            <Image url="@../images/beverages-carbonated-drink-cold-drink-1571849-1030x631.jpg" />
+            <Image url="@../../../../../first-sem-fina/src/main/resources/images/davis_burger_fries.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="561.0" fitWidth="605.0" layoutX="940.0" layoutY="222.0">
+      <ImageView fitHeight="534.0" fitWidth="560.0" layoutX="129.0" layoutY="235.0">
          <image>
-            <Image url="@../images/davis_burger_fries.jpg" />
+            <Image url="@../../../../../first-sem-fina/src/main/resources/images/juice-glasses.jpeg" />
          </image>
       </ImageView>
    </children>

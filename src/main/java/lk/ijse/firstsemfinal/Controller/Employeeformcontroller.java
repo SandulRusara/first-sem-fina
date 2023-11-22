@@ -60,12 +60,13 @@ public class Employeeformcontroller implements Initializable {
 
     @FXML
     void btnAddEmployeeAction(ActionEvent event) throws IOException {
+
+        EmployeePopWindowformcontroller.pane = subPane;
         Parent parent = FXMLLoader.load(this.getClass().getResource("/view/employeePopWindowform.fxml"));
         Scene scene = new Scene(parent);
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.setResizable(false);
-        EmployeePopWindowformcontroller.pane = subPane;
         stage.show();
 
     }

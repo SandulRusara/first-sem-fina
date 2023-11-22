@@ -9,6 +9,7 @@
 
 <AnchorPane fx:id="mainPane" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #E7E7E8;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.firstsemfinal.Controller.dashbordformController">
    <children>
+      <AnchorPane fx:id="subPane" layoutX="249.0" layoutY="-1.0" prefHeight="1080.0" prefWidth="1673.0" style="-fx-background-color: white;" />
       <AnchorPane prefHeight="1080.0" prefWidth="250.0" style="-fx-background-color: rgba(0, 0, 0, 0.97);">
          <children>
             <ImageView fitHeight="67.0" fitWidth="67.0" layoutX="21.0" layoutY="31.0">
@@ -60,19 +61,9 @@
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></JFXButton>
-            <ImageView fitHeight="37.0" fitWidth="33.0" layoutX="28.0" layoutY="561.0">
-               <image>
-                  <Image url="@../images/emp.png.png" />
-               </image>
-            </ImageView>
             <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="32.0" layoutY="507.0">
                <image>
                   <Image url="@../images/item.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="19.0" fitWidth="25.0" layoutX="32.0" layoutY="391.0">
-               <image>
-                  <Image url="@../images/customer.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="34.0" layoutY="448.0">
@@ -80,13 +71,22 @@
                   <Image url="@../images/img.icons8.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img" fitHeight="19.0" fitWidth="25.0" layoutX="38.0" layoutY="631.0">
+            <ImageView fitHeight="36.0" fitWidth="46.0" layoutX="15.0" layoutY="561.0">
                <image>
-                  <Image url="@../images/supplier.png" />
+                  <Image url="@../../../../../first-sem-fina/src/main/resources/images/emp.png.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="31.0" layoutY="392.0">
+               <image>
+                  <Image url="@../../../../../first-sem-fina/src/main/resources/images/customer.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="31.0" layoutY="631.0">
+               <image>
+                  <Image url="@../../../../../first-sem-fina/src/main/resources/images/supplier.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="subPane" layoutX="249.0" layoutY="-1.0" prefHeight="1080.0" prefWidth="1673.0" style="-fx-background-color: white;" />
    </children>
 </AnchorPane>

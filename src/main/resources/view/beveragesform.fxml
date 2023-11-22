@@ -23,7 +23,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </JFXButton>
-      <TableView fx:id="table" layoutX="418.0" layoutY="65.0" prefHeight="744.0" prefWidth="919.0">
+      <TableView fx:id="table" layoutX="418.0" layoutY="65.0" prefHeight="744.0" prefWidth="919.0" stylesheets="@../css/table.css">
          <columns>
             <TableColumn fx:id="idcolum" prefWidth="129.0" text="Id" />
             <TableColumn fx:id="nameColum" prefWidth="155.0" text="Name" />

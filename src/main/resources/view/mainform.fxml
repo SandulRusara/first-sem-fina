@@ -49,9 +49,9 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="243.0" layoutY="33.0">
+            <ImageView layoutX="243.0" layoutY="33.0">
                <image>
-                  <Image url="@../images/sells.gif" />
+                  <Image url="@../../../../../first-sem-fina/src/main/resources/images/sells.gif" />
                </image>
             </ImageView>
          </children></AnchorPane>
@@ -62,16 +62,16 @@
                   <Font name="System Bold Italic" size="24.0" />
                </font>
             </Label>
-            <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="243.0" layoutY="27.0">
-               <image>
-                  <Image url="@../images/Employee2.gif" />
-               </image>
-            </ImageView>
             <Label layoutX="114.0" layoutY="29.0" prefHeight="92.0" prefWidth="94.0" style="-fx-background-color: pink; -fx-background-radius: 90;" text="     21   ">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
+            <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="251.0" layoutY="35.0">
+               <image>
+                  <Image url="@../../../../../first-sem-fina/src/main/resources/images/Employee2.gif" />
+               </image>
+            </ImageView>
          </children></AnchorPane>
       <Label layoutX="113.0" layoutY="34.0" prefHeight="92.0" prefWidth="272.0" text="Overview">
          <font>
