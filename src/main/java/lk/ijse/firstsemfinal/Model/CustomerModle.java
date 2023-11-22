@@ -84,4 +84,27 @@ public class CustomerModle {
         return false;
 
     }
+
+    public static customerDTO getCustomerbyContact(int contact) {
+        customerDTO customerDTO = new customerDTO();
+        try {
+            Connection connection=Dbconnection.getInstance().getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement("select * from customer where customerContact = ?");
+            preparedStatement.setInt(1, contact);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                customerDTO.setCustomerId(resultSet.getInt(1));
+                customerDTO.setCustomerName(resultSet.getString(2));
+                customerDTO.setCustAddrss(resultSet.getString(3));
+                customerDTO.setCustomerContact(resultSet.getString(4));
+                customerDTO.setDate(resultSet.getString(5));
+                customerDTO.setEmail(resultSet.getString(6));
+            }
+
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return customerDTO;
+    }
 }

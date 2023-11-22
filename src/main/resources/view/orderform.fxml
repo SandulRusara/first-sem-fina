@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXCheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -17,64 +16,49 @@
             <Font name="System Bold" size="49.0" />
          </font>
       </Label>
-      <TableView layoutX="108.0" layoutY="355.0" prefHeight="538.0" prefWidth="1453.0">
+      <TableView fx:id="table" layoutX="108.0" layoutY="365.0" prefHeight="528.0" prefWidth="1453.0" stylesheets="@../css/table.css">
         <columns>
-          <TableColumn prefWidth="251.0" text="Item Id" />
-          <TableColumn prefWidth="202.0" text="Item Name" />
-            <TableColumn prefWidth="227.0" text="Item Price" />
-            <TableColumn prefWidth="264.0" text="Qty" />
-            <TableColumn prefWidth="258.0" text="Total" />
-            <TableColumn prefWidth="250.0" text="Action" />
+          <TableColumn fx:id="idcolum" prefWidth="251.0" text="Item Id" />
+          <TableColumn fx:id="nameColum" prefWidth="202.0" text="Item Name" />
+            <TableColumn fx:id="priceColum" prefWidth="227.0" text="Item Price" />
+            <TableColumn fx:id="qutyColum" prefWidth="264.0" text="Qty" />
+            <TableColumn fx:id="totalColum" prefWidth="258.0" text="Total" />
+            <TableColumn fx:id="actionColum" prefWidth="250.0" text="Action" />
         </columns>
       </TableView>
-      <Label layoutX="117.0" layoutY="223.0" prefHeight="27.0" prefWidth="123.0" text="Customer Id :-">
+      <Label layoutX="117.0" layoutY="154.0" prefHeight="27.0" prefWidth="192.0" text="Customer Contact :-">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="663.0" layoutY="135.0" prefHeight="24.0" prefWidth="109.0" text="Item Name :-">
+      <Label layoutX="616.0" layoutY="147.0" prefHeight="27.0" prefWidth="156.0" text="Bevegers Name :-">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="675.0" layoutY="218.0" prefHeight="24.0" prefWidth="109.0" text="Item code:-">
+      <Label layoutX="661.0" layoutY="245.0" prefHeight="24.0" prefWidth="109.0" text="Item code:-">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="675.0" layoutY="303.0" prefHeight="24.0" prefWidth="109.0" text="Item Price :-">
+      <Label layoutX="661.0" layoutY="311.0" prefHeight="24.0" prefWidth="109.0" text="Item Price :-">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="117.0" layoutY="308.0" prefHeight="27.0" prefWidth="156.0" text="Customer Name :-">
+      <Label layoutX="107.0" layoutY="253.0" prefHeight="27.0" prefWidth="156.0" text="Customer Name :-">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="1199.0" layoutY="220.0" prefHeight="24.0" prefWidth="109.0" text="Item Price :-">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="1199.0" layoutY="135.0" prefHeight="24.0" prefWidth="109.0" text="Item Price :-">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <ComboBox layoutX="784.0" layoutY="136.0" prefHeight="25.0" prefWidth="192.0" />
-      <TextField layoutX="273.0" layoutY="309.0" prefHeight="25.0" prefWidth="224.0" />
-      <TextField layoutX="784.0" layoutY="219.0" prefHeight="25.0" prefWidth="224.0" />
-      <TextField layoutX="784.0" layoutY="304.0" prefHeight="25.0" prefWidth="224.0" />
-      <TextField layoutX="1308.0" layoutY="136.0" prefHeight="25.0" prefWidth="224.0" />
-      <TextField layoutX="1308.0" layoutY="221.0" prefHeight="25.0" prefWidth="224.0" />
+      <ComboBox fx:id="bevegrsNameFeld" layoutX="784.0" layoutY="148.0" onAction="#onbevergesSelected" prefHeight="25.0" prefWidth="192.0" />
       <Label layoutX="108.0" layoutY="915.0" prefHeight="24.0" prefWidth="109.0" text="New Total :-">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="108.0" layoutY="942.0" prefHeight="25.0" prefWidth="224.0" />
-      <JFXButton layoutX="987.0" layoutY="934.0" prefHeight="41.0" prefWidth="156.0" style="-fx-background-color: #31F301; -fx-background-radius: 30;" text="Add to cart">
+      <TextField fx:id="totalll" layoutX="108.0" layoutY="942.0" prefHeight="25.0" prefWidth="224.0" />
+      <JFXButton fx:id="addcartButton" layoutX="1307.0" layoutY="291.0" onAction="#onaddCartClick" prefHeight="41.0" prefWidth="156.0" style="-fx-background-color: #31F301; -fx-background-radius: 30;" text="Add to cart">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -84,20 +68,36 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="1397.0" layoutY="934.0" prefHeight="41.0" prefWidth="156.0" style="-fx-background-color: #1958B6; -fx-background-radius: 30;" text="Place Order" textFill="WHITE">
+      <JFXButton fx:id="placeOrderButton" layoutX="1397.0" layoutY="934.0" onAction="#onPlaceOrderClick" prefHeight="41.0" prefWidth="156.0" style="-fx-background-color: #1958B6; -fx-background-radius: 30;" text="Place Order" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </JFXButton>
-      <JFXCheckBox layoutX="117.0" layoutY="120.0" prefHeight="27.0" prefWidth="234.0" text="Customer has allready?">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </JFXCheckBox>
-      <TextField layoutX="247.0" layoutY="221.0" prefHeight="25.0" prefWidth="224.0" />
-      <JFXButton layoutX="117.0" layoutY="162.0" prefHeight="34.0" prefWidth="131.0" style="-fx-background-color: #31F301; -fx-background-radius: 40;" text="Add new Customer">
+      <JFXButton layoutX="148.0" layoutY="73.0" onAction="#btnNewCustomerOnAction" prefHeight="34.0" prefWidth="131.0" style="-fx-background-color: #31F301; -fx-background-radius: 40;" text="Add new Customer">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></JFXButton>
+      <Label layoutX="1161.0" layoutY="147.0" prefHeight="24.0" prefWidth="109.0" text="Order Date :-">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1252.0" layoutY="230.0" prefHeight="24.0" prefWidth="109.0" text="Qty">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateField" layoutX="1270.0" layoutY="144.0" prefHeight="34.0" prefWidth="149.0" />
+      <TextField fx:id="customerCOntactField" layoutX="279.0" layoutY="151.0" onKeyPressed="#oncontactTypeCustomer" prefHeight="34.0" prefWidth="172.0" />
+      <TextField fx:id="customerNameField" layoutX="263.0" layoutY="250.0" prefHeight="34.0" prefWidth="172.0" />
+      <TextField fx:id="itemCodeFeld" layoutX="760.0" layoutY="242.0" prefHeight="34.0" prefWidth="149.0" />
+      <TextField fx:id="itemPriceFeld" layoutX="760.0" layoutY="308.0" prefHeight="34.0" prefWidth="149.0" />
+      <ComboBox fx:id="foodNameFeld" layoutX="784.0" layoutY="194.0" onAction="#onFoodSelected" prefHeight="25.0" prefWidth="192.0" />
+      <Label layoutX="616.0" layoutY="193.0" prefHeight="27.0" prefWidth="140.0" text="Foods Name :-">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="qtyField" layoutX="1309.0" layoutY="233.0" prefHeight="25.0" prefWidth="102.0" />
    </children>
 </AnchorPane>

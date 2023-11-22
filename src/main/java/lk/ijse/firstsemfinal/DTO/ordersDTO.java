@@ -13,6 +13,6 @@ public class ordersDTO {
     private Integer orderId;
     private String orderPayment;
     private String orderType;
-    private Data orderDate;
+    private String orderDate;
     private Integer customerId;
 }

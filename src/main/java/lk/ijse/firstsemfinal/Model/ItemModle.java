@@ -39,6 +39,26 @@ public class ItemModle {
        boolean isSaved=preparedStatement.executeUpdate()>0;
        return isSaved;
     }
+    public static itemDTO getItemByName(String name){
+        itemDTO itemDTO = new itemDTO();
+        try {
+            Connection connection = Dbconnection.getInstance().getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement("select * from item where itemName = ?");
+            preparedStatement.setString(1,name);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                itemDTO.setItemId(resultSet.getInt(1));
+                itemDTO.setItemCategory(resultSet.getString(2));
+                itemDTO.setItemName(resultSet.getString(3));
+                itemDTO.setPrice(resultSet.getString(4));
+                itemDTO.setType(resultSet.getString(5));
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return itemDTO;
+    }
 
     public static ArrayList<itemDTO> getAllItem(String itemType) throws SQLException {
         ArrayList<itemDTO>arrayList=new ArrayList<>();
