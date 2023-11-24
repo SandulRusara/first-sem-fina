@@ -63,7 +63,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="1192.0" layoutY="934.0" prefHeight="41.0" prefWidth="156.0" style="-fx-background-color: #31F301; -fx-background-radius: 30;" text="QR">
+      <JFXButton layoutX="1192.0" layoutY="934.0" onAction="#btnPrintOnAction" prefHeight="41.0" prefWidth="156.0" style="-fx-background-color: #31F301; -fx-background-radius: 30;" text="Print">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

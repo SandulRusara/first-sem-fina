@@ -21,15 +21,22 @@ import lk.ijse.firstsemfinal.DTO.customerDTO;
 import lk.ijse.firstsemfinal.DTO.itemDTO;
 import lk.ijse.firstsemfinal.DTO.ordersDTO;
 import lk.ijse.firstsemfinal.DTO.tm.orderDetailTM;
+import lk.ijse.firstsemfinal.DbConnection.Dbconnection;
 import lk.ijse.firstsemfinal.Model.CustomerModle;
 import lk.ijse.firstsemfinal.Model.ItemModle;
 import lk.ijse.firstsemfinal.Model.OrderDetailModel;
 import lk.ijse.firstsemfinal.Model.OrderModel;
 import lombok.SneakyThrows;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.design.JasperDesign;
+import net.sf.jasperreports.engine.xml.JRXmlLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.sql.Date;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -241,4 +248,18 @@ public class Orderformcontroller implements Initializable {
         dateField.setText(String.valueOf(date));
 
     }
-}
+
+    public void btnPrintOnAction(ActionEvent actionEvent) throws JRException, SQLException {
+        InputStream resourceAsStream = getClass().getResourceAsStream("/report/Blank_A4_1.jrxml");
+        JasperDesign load = JRXmlLoader.load(resourceAsStream);
+        JasperReport jasperReport = JasperCompileManager.compileReport(load);
+        JasperPrint jasperPrint = JasperFillManager.fillReport(
+                jasperReport,
+                null,
+                Dbconnection.getInstance().getConnection()
+        );
+
+        JasperViewer.viewReport(jasperPrint,false);
+    }
+    }
+
