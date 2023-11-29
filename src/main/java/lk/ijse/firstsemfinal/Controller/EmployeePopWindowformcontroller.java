@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
@@ -16,6 +17,8 @@ import lk.ijse.firstsemfinal.DTO.employeeDTO;
 import lk.ijse.firstsemfinal.Model.CustomerModle;
 import lk.ijse.firstsemfinal.Model.EmployeeModle;
 import lombok.SneakyThrows;
+
+import java.util.regex.Pattern;
 
 public class EmployeePopWindowformcontroller {
     public static int UserID;
@@ -56,17 +59,49 @@ public class EmployeePopWindowformcontroller {
         String contact = txtContact.getText();
         String nic = txtNic.getText();
 
-        employeeDTO employeeDTO=new employeeDTO(0,name,address,contact,UserID,nic);
-        boolean b = EmployeeModle.saveEmployee(employeeDTO);
-        Stage stage = (Stage) updateButton.getScene().getWindow();
-        stage.close();
-        Parent parent = FXMLLoader.load(getClass().getResource("/view/employeeform.fxml"));
-        pane.getChildren().clear();
-        pane.getChildren().add(parent);
-
+        if (validationEmployee()) {
+            employeeDTO employeeDTO = new employeeDTO(0, name, address, contact, UserID, nic);
+            boolean b = EmployeeModle.saveEmployee(employeeDTO);
+            Stage stage = (Stage) updateButton.getScene().getWindow();
+            stage.close();
+            Parent parent = FXMLLoader.load(getClass().getResource("/view/employeeform.fxml"));
+            pane.getChildren().clear();
+            pane.getChildren().add(parent);
+        }
     }
 
     public void btnUpdateOnAction(ActionEvent actionEvent) {
 
+    }
+
+    public boolean validationEmployee(){
+        boolean matches1 = Pattern.matches("^([ \\u00c0-\\u01ffa-zA-Z'\\-]{3,})+$", txtName.getText());
+        if (!matches1){
+            Alert alert = new Alert(Alert.AlertType.ERROR, "invalid name");
+            alert.showAndWait();
+            return false;
+        }
+
+        boolean matches2 = Pattern.matches("^(\\d+\\w*),?\\s*([a-zA-Z\\s]+),?\\s*([a-zA-Z\\s]+),?$", txtAddress.getText());
+        if(!matches2){
+            Alert alert = new Alert(Alert.AlertType.ERROR, "invalid address");
+            alert.showAndWait();
+            return false;
+        }
+
+        boolean matches3 = Pattern.matches("^(?:\\+94|0)([1-9])\\d{8}$", txtContact.getText());
+        if(!matches3){
+            Alert alert = new Alert(Alert.AlertType.ERROR, "invalid contact");
+            alert.showAndWait();
+            return false;
+        }
+
+        boolean matches4 = Pattern.matches("^[0-9]{12}[vV]$", txtNic.getText());
+        if(!matches4){
+            Alert alert = new Alert(Alert.AlertType.ERROR, "invalid nic");
+            alert.showAndWait();
+            return false;
+        }
+        return true;
     }
 }

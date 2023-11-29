@@ -9,8 +9,12 @@ import javafx.stage.Stage;
 import lk.ijse.firstsemfinal.DTO.customerDTO;
 
 import java.io.IOException;
+import java.sql.Date;
 import java.sql.SQLException;
+import java.sql.Time;
 import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.Random;
 import java.util.regex.Pattern;
 
 import static java.lang.Integer.parseInt;
@@ -20,6 +24,7 @@ import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import lk.ijse.firstsemfinal.Model.CustomerModle;
+import lk.ijse.firstsemfinal.mail.Mail;
 
 public class CustomerPopWindowcontroller {
     public static AnchorPane pane;
@@ -61,6 +66,21 @@ public class CustomerPopWindowcontroller {
                 throw new RuntimeException(e);
             }
             if (b) {
+
+
+                Mail mail = new Mail();
+                mail.setMsg("Hello"+
+                        "\nTime : " +
+                        Time.valueOf(LocalTime.now()) + "\n" +
+                        "Date : " +
+                        Date.valueOf(LocalDate.now()));//email message
+                mail.setTo(customerEmail.getText()); //receiver's mail
+                mail.setSubject("Alert"); //email subject
+
+                Thread thread = new Thread(mail);
+                thread.start();
+
+
                 new Alert(Alert.AlertType.CONFIRMATION, "Customre Saved").show();
             }
 
@@ -90,19 +110,19 @@ public class CustomerPopWindowcontroller {
             return false;
         }
 
-        /*boolean matches2 = Pattern.matches("[A-Za-z0-9'\\.\\-\\s\\,\\\\]", customeraddress.getText());
+        boolean matches2 = Pattern.matches("^(\\d+\\w*),?\\s*([a-zA-Z\\s]+),?\\s*([a-zA-Z\\s]+),?$", customeraddress.getText());
         if(!matches2){
             Alert alert = new Alert(Alert.AlertType.ERROR,"Invalid address");
             alert.showAndWait();
             return false;
-        }*/
+        }
 
-        /*boolean matches3 = Pattern.matches("^\\s*(?:\\+?(\\d{1,3}))?[-. (](\\d{3})[-. )]*(\\d{3})[-. ]*(\\d{4})(?: *x(\\d+))?\\s$", customerContact.getText());
+        boolean matches3 = Pattern.matches("^(?:\\+94|0)([1-9])\\d{8}$", customerContact.getText());
         if (!matches3) {
             Alert alert = new Alert(Alert.AlertType.ERROR,"Invalid contact number");
             alert.showAndWait();
             return false;
-        }*/
+        }
 
         boolean matches4 = Pattern.matches("(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])", customerEmail.getText());
         if (!matches4) {
