@@ -39,8 +39,8 @@
                      </font>
                   </Label>
                   <Button fx:id="loginButton" layoutX="230.0" layoutY="564.0" mnemonicParsing="false" onAction="#onloginClick" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: black;" text="LOGIN" textFill="WHITE" />
-                  <TextField fx:id="userName" layoutX="138.0" layoutY="366.0" prefHeight="33.0" prefWidth="250.0" promptText="User Name" />
-                  <TextField fx:id="password" layoutX="138.0" layoutY="431.0" prefHeight="34.0" prefWidth="250.0" promptText="Password" />
+                  <TextField fx:id="userName" layoutX="138.0" layoutY="366.0" onAction="#txtNameOnAction" prefHeight="33.0" prefWidth="250.0" promptText="User Name" />
+                  <TextField fx:id="password" layoutX="138.0" layoutY="431.0" onAction="#txtPasswordOnAction" prefHeight="34.0" prefWidth="250.0" promptText="Password" />
                </children>
             </AnchorPane>
          </children>

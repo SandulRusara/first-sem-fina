@@ -133,4 +133,19 @@ public class CustomerPopWindowcontroller {
         return true;
     }
 
+    public void txtNameOnAction(ActionEvent actionEvent) {
+        customerContact.requestFocus();
+    }
+
+    public void txtAddressOnAction(ActionEvent actionEvent) {
+        customerEmail.requestFocus();
+    }
+
+    public void txtOnContactActoin(ActionEvent actionEvent) {
+        customeraddress.requestFocus();
+    }
+
+    public void txtEmailOnAction(ActionEvent actionEvent) {
+        saveButton.requestFocus();
+    }
 }

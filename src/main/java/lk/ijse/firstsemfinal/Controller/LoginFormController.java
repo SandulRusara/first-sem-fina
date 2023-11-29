@@ -56,4 +56,11 @@ public class LoginFormController {
         }
     }
 
+    public void txtNameOnAction(ActionEvent actionEvent) {
+        password.requestFocus();
+    }
+
+    public void txtPasswordOnAction(ActionEvent actionEvent) {
+        loginButton.requestFocus();
+    }
 }
