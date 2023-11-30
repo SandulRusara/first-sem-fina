@@ -82,6 +82,11 @@ public class CustomerFoamController implements Initializable {
     @FXML
     private TableColumn<customerTM,JFXButton> actionColum;
 
+    @FXML
+    private TableColumn<customerTM, JFXButton> actionColum1;
+
+
+
     private CustomerModle customerModel=new CustomerModle();
 
 
@@ -109,6 +114,7 @@ public class CustomerFoamController implements Initializable {
         contactcolumn.setCellValueFactory(new PropertyValueFactory<customerTM,String>("contact"));
         datecolumn.setCellValueFactory(new PropertyValueFactory<customerTM,String>("date"));
         actionColum.setCellValueFactory(new PropertyValueFactory<customerTM,JFXButton>("button"));
+        actionColum1.setCellValueFactory(new PropertyValueFactory<customerTM,JFXButton>("update"));
 
     }
     public  void loadValues(){
@@ -126,7 +132,8 @@ public class CustomerFoamController implements Initializable {
                     arrayList.get(i).getCustomerContact(),
                     String.valueOf(date),
                     new JFXButton("Delete"),
-                    arrayList.get(i).getEmail()
+                    arrayList.get(i).getEmail(),
+                    new JFXButton("update")
                     );
             observableList.add(customerTM);
 
@@ -136,6 +143,9 @@ public class CustomerFoamController implements Initializable {
             observableList.get(i).getButton().setStyle("-fx-background-color: rgba(175,108,108,1)");
             observableList.get(i).getButton().setAlignment(Pos.CENTER);
             observableList.get(i).getButton().setTextFill(Color.WHITE);
+            observableList.get(i).getUpdate().setStyle("-fx-background-color: rgba(96, 120, 205, 0.97)");
+            observableList.get(i).getUpdate().setTextFill(Color.WHITE);
+
         }
 
         for (int i = 0; i < observableList.size(); i++) {
@@ -148,6 +158,33 @@ public class CustomerFoamController implements Initializable {
                 }else{
                    new Alert(Alert.AlertType.ERROR,"Error!!").show();
                 }
+
+            });
+            int id=observableList.get(i).getCustId();
+            String name = observableList.get(i).getName();
+            String address = observableList.get(i).getAddress();
+            String contact = observableList.get(i).getContact();
+            String date = observableList.get(i).getDate();
+            String email = observableList.get(i).getEmail();
+
+            observableList.get(i).getUpdate().setOnAction(event -> {
+                CustomerUpdateformcontroller.id = id;
+                CustomerUpdateformcontroller.name = name;
+                CustomerUpdateformcontroller.address = address ;
+                CustomerUpdateformcontroller.con = contact ;
+                CustomerUpdateformcontroller.mail =email;
+
+                Parent parent = null;
+                try {
+                    parent = FXMLLoader.load(getClass().getResource("/view/customerUpdateform.fxml"));
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                Scene scene = new Scene(parent);
+                Stage stage = new Stage();
+                stage.setScene(scene);
+                stage.setResizable(false);
+                stage.show();
 
             });
 

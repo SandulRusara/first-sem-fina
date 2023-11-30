@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="517.0" prefWidth="811.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.firstsemfinal.Controller.CustomerUpdateformcontroller">
+   <children>
+      <AnchorPane fx:id="apane" layoutX="9.0" layoutY="10.0" prefHeight="517.0" prefWidth="811.0" style="-fx-background-color: white; -fx-background-radius: 30;">
+         <children>
+            <TextField fx:id="customerName" layoutX="35.0" layoutY="74.0" onAction="#txtNameOnAction" prefHeight="41.0" prefWidth="343.0" style="-fx-background-radius: 10;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="customeraddress" layoutX="29.0" layoutY="224.0" onAction="#txtAddressOnAction" prefHeight="41.0" prefWidth="343.0" style="-fx-background-radius: 10;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="customerContact" layoutX="448.0" layoutY="71.0" onAction="#txtOnContactActoin" prefHeight="41.0" prefWidth="343.0" style="-fx-background-radius: 10;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <JFXButton fx:id="saveButton" layoutX="626.0" layoutY="431.0" onAction="#oncustomerSave" prefHeight="41.0" prefWidth="119.0" style="-fx-background-color: #31F301; -fx-background-radius: 30;" text="Save">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="35.0" layoutY="44.0" prefHeight="24.0" prefWidth="119.0" text="Customer Name :-">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="190.0" prefHeight="24.0" prefWidth="137.0" text="Customer Address:- :-">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="476.0" layoutY="37.0" prefHeight="24.0" prefWidth="131.0" text="Customer Contact :-">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="customerEmail" layoutX="447.0" layoutY="221.0" onAction="#txtEmailOnAction" prefHeight="41.0" prefWidth="343.0" style="-fx-background-radius: 10;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="475.0" layoutY="187.0" prefHeight="24.0" prefWidth="131.0" text="Customer Email :-">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

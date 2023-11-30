@@ -20,7 +20,8 @@
             <TableColumn fx:id="addresscolumn" prefWidth="394.0" text="Address" />
             <TableColumn fx:id="contactcolumn" prefWidth="313.0" text="Contact" />
             <TableColumn fx:id="datecolumn" prefWidth="333.0" text="Date" />
-            <TableColumn fx:id="actionColum" prefWidth="296.0" />
+            <TableColumn fx:id="actionColum" prefWidth="158.0" />
+            <TableColumn fx:id="actionColum1" prefWidth="158.0" />
         </columns>
       </TableView>
       <JFXButton fx:id="addCustomerId" layoutX="1319.0" layoutY="160.0" onAction="#btnAddCustomerOnAction" prefHeight="54.0" prefWidth="226.0" style="-fx-background-color: rgba(9, 52, 205, 0.97); -fx-background-radius: 30;" text="Add Customer" textFill="WHITE">

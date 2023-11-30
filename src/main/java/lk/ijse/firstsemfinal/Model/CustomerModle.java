@@ -1,6 +1,7 @@
 package lk.ijse.firstsemfinal.Model;
 
 import lk.ijse.firstsemfinal.DTO.customerDTO;
+import lk.ijse.firstsemfinal.DTO.supplierDTO;
 import lk.ijse.firstsemfinal.DbConnection.Dbconnection;
 
 import java.sql.Connection;
@@ -40,7 +41,9 @@ public class CustomerModle {
                         resultSet.getString(3),
                         resultSet.getString(4),
                         resultSet.getString(5),
-                        resultSet.getString(6));
+                        resultSet.getString(6)
+
+                );
 
 
                 arrayList.add(customerDTO);
@@ -106,5 +109,25 @@ public class CustomerModle {
             e.printStackTrace();
         }
         return customerDTO;
+    }
+
+    public static boolean updateCustomer(customerDTO customerDTO){
+        try {
+            Connection connection = Dbconnection.getInstance().getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(" update customer set Email = ? ,date = ? , customerContact = ? , customerAddress = ?,customerName = ? where customerId = ?");
+            preparedStatement.setString(1,customerDTO.getEmail());
+            preparedStatement.setString(2,customerDTO.getDate());
+            preparedStatement.setString(3,customerDTO.getCustomerContact());
+            preparedStatement.setString(4,customerDTO.getCustAddrss());
+            preparedStatement.setString(5,customerDTO.getCustomerName());
+            preparedStatement.setInt(6,customerDTO.getCustomerId());
+
+            int i = preparedStatement.executeUpdate();
+            return i > 0;
+
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return false;
     }
 }
