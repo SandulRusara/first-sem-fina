@@ -13,9 +13,9 @@
 
 <AnchorPane fx:id="pane" prefHeight="850" prefWidth="1378" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.firstsemfinal.Controller.Foodsformcontroller">
    <children>
-      <ImageView fitHeight="850.0" fitWidth="1378.0" opacity="0.09">
+      <ImageView fitHeight="850.0" fitWidth="1378.0" opacity="0.8">
          <image>
-            <Image url="@../../../../../first-sem-fina/src/main/resources/images/davis_burger_fries.jpg" />
+            <Image url="@../images/170913134128-gettyimages-78202765.jpg" />
          </image>
       </ImageView>
       <JFXButton layoutX="177.0" layoutY="610.0" onAction="#btnSaveOnAction" prefHeight="41.0" prefWidth="101.0" style="-fx-background-color: #31F301;" text="Save">
@@ -33,7 +33,7 @@
             <TableColumn fx:id="updateButtoncolumn" minWidth="0.0" prefWidth="101.0" />
          </columns>
       </TableView>
-      <Label layoutX="136.0" layoutY="48.0" opacity="0.38" prefHeight="85.0" prefWidth="196.0" style="-fx-background-color: white;" text="Foods">
+      <Label layoutX="136.0" layoutY="48.0" opacity="0.38" prefHeight="85.0" prefWidth="196.0" style="-fx-background-color: white; -fx-background-radius: 30;" text="    Foods">
          <font>
             <Font size="41.0" />
          </font>
@@ -49,6 +49,5 @@
          </font>
       </TextField>
       <ComboBox fx:id="txtFoodCategoris" layoutX="34.0" layoutY="496.0" prefHeight="41.0" prefWidth="387.0" />
-      <ComboBox fx:id="txtTableCategoris" layoutX="466.0" layoutY="50.0" prefHeight="41.0" prefWidth="273.0" style="-fx-background-radius: 30;" />
    </children>
 </AnchorPane>

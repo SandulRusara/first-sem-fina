@@ -113,5 +113,33 @@
             <Image url="@../../../../../first-sem-fina/src/main/resources/images/sells.gif" />
          </image>
       </ImageView>
+      <Label layoutX="1299.0" layoutY="34.0" opacity="0.83" prefHeight="63.0" prefWidth="272.0" style="-fx-background-color: #ff1919; -fx-background-radius: 10;" text="                  Email ">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1299.0" layoutY="113.0" opacity="0.84" prefHeight="63.0" prefWidth="272.0" style="-fx-background-color: #2F4  #80ff804F; -fx-background-radius: 10;" text="                 Messages">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="35.0" fitWidth="39.0" layoutX="1322.0" layoutY="48.0">
+         <image>
+            <Image url="@../images/icons8-mail-30.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1496.0" layoutY="56.0" prefHeight="20.0" prefWidth="59.0" style="-fx-background-color: black; -fx-background-radius: 15;" text="      12" textFill="WHITE" />
+      <Label layoutX="1496.0" layoutY="134.0" prefHeight="20.0" prefWidth="59.0" style="-fx-background-color: black; -fx-background-radius: 15;" text="       55" textFill="WHITE" />
+      <ImageView fitHeight="42.0" fitWidth="48.0" layoutX="1318.0" layoutY="124.0">
+
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="39.0" layoutX="1323.0" layoutY="123.0">
+
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="39.0" layoutX="1322.0" layoutY="128.0">
+         <image>
+            <Image url="@../images/icons8-mail-30.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

@@ -13,9 +13,9 @@
 
 <AnchorPane fx:id="apane" prefHeight="850" prefWidth="1378" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.firstsemfinal.Controller.Beveragesformcontroller">
    <children>
-      <ImageView fitHeight="850.0" fitWidth="1378.0" opacity="0.28">
+      <ImageView fitHeight="850.0" fitWidth="1378.0" opacity="0.55">
          <image>
-            <Image url="@../images/photo-1531025503751-fedbb2ad9de5.jpg" />
+            <Image url="@../images/juice-bar-POS.png" />
          </image>
       </ImageView>
       <JFXButton layoutX="165.0" layoutY="642.0" onAction="#btnSaveOnAction" prefHeight="41.0" prefWidth="101.0" style="-fx-background-color: #31F301;" text="Save">
@@ -33,7 +33,7 @@
             <TableColumn fx:id="updateButton" prefWidth="144.0" />
          </columns>
       </TableView>
-      <Label layoutX="126.0" layoutY="38.0" opacity="0.38" prefHeight="85.0" prefWidth="196.0" style="-fx-background-color: white;" text="Beverages">
+      <Label layoutX="126.0" layoutY="38.0" opacity="0.38" prefHeight="85.0" prefWidth="196.0" style="-fx-background-color: white; -fx-background-radius: 30;" text="Beverages">
          <font>
             <Font size="41.0" />
          </font>
@@ -48,7 +48,6 @@
             <Font size="18.0" />
          </font>
       </TextField>
-      <ComboBox fx:id="txtTableCategories" layoutX="418.0" layoutY="18.0" prefHeight="41.0" prefWidth="290.0" style="-fx-background-color: white; -fx-background-radius: 30;" />
       <ComboBox fx:id="txtJuiceCetagories" layoutX="12.0" layoutY="517.0" prefHeight="41.0" prefWidth="387.0" />
    </children>
 </AnchorPane>
