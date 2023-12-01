@@ -16,7 +16,8 @@
             <TableColumn fx:id="AddressColum" prefWidth="226.0" text="Address" />
             <TableColumn fx:id="ContactColum" prefWidth="274.0" text="Contact" />
             <TableColumn fx:id="NicColum" prefWidth="301.0" text="Nic" />
-            <TableColumn fx:id="deleteColum" prefWidth="297.0" />
+            <TableColumn fx:id="deleteColum" prefWidth="158.0" />
+            <TableColumn fx:id="updateColum" prefWidth="158.0" />
          </columns>
       </TableView>
       <Label layoutX="550.0" layoutY="37.0" text="Employee Manage Form">

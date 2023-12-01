@@ -3,7 +3,9 @@ package lk.ijse.firstsemfinal.Controller;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -11,6 +13,7 @@ import javafx.stage.Stage;
 import lk.ijse.firstsemfinal.DTO.customerDTO;
 import lk.ijse.firstsemfinal.Model.CustomerModle;
 
+import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
@@ -41,7 +44,7 @@ public class CustomerUpdateformcontroller implements Initializable {
 
 
     @FXML
-    void oncustomerSave(ActionEvent event) {
+    void oncustomerSave(ActionEvent event) throws IOException {
         String name = customerName.getText();
         String address = customeraddress.getText();
         String con = customerContact.getText();
@@ -53,6 +56,9 @@ public class CustomerUpdateformcontroller implements Initializable {
             Stage stage = (Stage) saveButton.getScene().getWindow();
             stage.close();
             new Alert(Alert.AlertType.CONFIRMATION,"Update Succefully!").show();
+            Parent parent = FXMLLoader.load(getClass().getResource("/view/customerFoam.fxml"));
+            apane.getChildren().clear();
+            apane.getChildren().add(parent);
         }
 
     }

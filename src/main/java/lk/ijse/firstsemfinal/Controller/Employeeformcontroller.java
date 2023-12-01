@@ -52,6 +52,9 @@ public class Employeeformcontroller implements Initializable {
     @FXML
     private AnchorPane subPane;
 
+    @FXML
+    private TableColumn<EmployeeTM, JFXButton> updateColum;
+
 
 
 
@@ -80,6 +83,7 @@ public class Employeeformcontroller implements Initializable {
         ContactColum.setCellValueFactory(new PropertyValueFactory<EmployeeTM, Integer>("contactColumn"));
         NicColum.setCellValueFactory(new PropertyValueFactory<EmployeeTM, String>("NicColum"));
         deleteColum.setCellValueFactory(new PropertyValueFactory<EmployeeTM, JFXButton>("deleteColum"));
+        updateColum.setCellValueFactory(new PropertyValueFactory<EmployeeTM,JFXButton>("updateColum"));
 
     }
 
@@ -95,7 +99,9 @@ public class Employeeformcontroller implements Initializable {
                         arrayList.get(i).getEmployeeAddress(),
                         arrayList.get(i).getEmployeeContact(),
                         arrayList.get(i).getNic(),
-                        new JFXButton("Delete"));
+                        new JFXButton("Delete"),
+                        new JFXButton("update")
+                );
                     observableList.add(employeeTM);
 
                 table.setItems(observableList);
@@ -105,6 +111,9 @@ public class Employeeformcontroller implements Initializable {
                 observableList.get(i).getDeleteColum().setStyle("-fx-background-color: rgba(175,108,108,1)");
                 observableList.get(i).getDeleteColum().setAlignment(Pos.CENTER);
                 observableList.get(i).getDeleteColum().setTextFill(Color.WHITE);
+                observableList.get(i).getUpdateColum().setStyle("-fx-background-color: rgba(96, 120, 205, 0.97)");
+                observableList.get(i).getUpdateColum().setTextFill(Color.WHITE);
+
             }
             for (int i = 0; i < observableList.size(); i++) {
                 int empID = Integer.parseInt(observableList.get(i).getIdcolum());
@@ -118,7 +127,36 @@ public class Employeeformcontroller implements Initializable {
                     } catch (SQLException e) {
                         throw new RuntimeException(e);
                     }
+
                 });
+                int emppID = Integer.parseInt(observableList.get(i).getIdcolum());
+                String name = observableList.get(i).getNameColum();
+                String address = observableList.get(i).getAddressColum();
+                String contact = observableList.get(i).getContactColumn();
+                int userNmae = arrayList.get(i).getUserId();
+                String nic = observableList.get(i).getNicColum();
+
+                observableList.get(i).getUpdateColum().setOnAction(actionEvent -> {
+                    try {
+                        EmployeeUpdateformcontroller.id = emppID;
+                        EmployeeUpdateformcontroller.userID = userNmae;
+                        EmployeeUpdateformcontroller.name = name;
+                        EmployeeUpdateformcontroller.address = address;
+                        EmployeeUpdateformcontroller.contact = contact;
+                        EmployeeUpdateformcontroller.nic = nic;
+                        EmployeeUpdateformcontroller.apane = subPane;
+                        Parent parent = FXMLLoader.load(getClass().getResource("/view/employeeUpdateform.fxml"));
+                        Scene scene = new Scene(parent);
+                        Stage stage = new Stage();
+                        stage.setScene(scene);
+                        stage.setResizable(false);
+                        stage.show();
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                });
+
+
             }
 
         } catch (SQLException e) {

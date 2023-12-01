@@ -1,6 +1,7 @@
 package lk.ijse.firstsemfinal.Model;
 
 import lk.ijse.firstsemfinal.DTO.employeeDTO;
+import lk.ijse.firstsemfinal.DTO.supplierDTO;
 import lk.ijse.firstsemfinal.DbConnection.Dbconnection;
 
 import java.sql.Connection;
@@ -61,4 +62,22 @@ public class EmployeeModle {
        return false;
 
     }
+    public static boolean updateEmployee(employeeDTO employeeDTO){
+
+        try {
+            Connection connection = Dbconnection.getInstance().getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement("update employee set employeeName = ? , employeeAddress = ? ,employeeContact = ?, nic = ? where employeeId = ? ");
+            preparedStatement.setString(1,employeeDTO.getEmployeeName());
+            preparedStatement.setString(2,employeeDTO.getEmployeeAddress());
+            preparedStatement.setString(3,employeeDTO.getEmployeeContact());
+            preparedStatement.setString(4,employeeDTO.getNic());
+            preparedStatement.setInt(5,employeeDTO.getEmployeeId());
+            int i = preparedStatement.executeUpdate();
+            return i>0;
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+
 }

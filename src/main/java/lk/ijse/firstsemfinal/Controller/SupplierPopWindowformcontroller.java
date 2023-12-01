@@ -78,12 +78,12 @@ public class SupplierPopWindowformcontroller {
             return false;
         }
 
-        boolean matches2 = Pattern.matches("^(\\d+\\w*),?\\s*([a-zA-Z\\s]+),?\\s*([a-zA-Z\\s]+),?$", txtAddress.getText());
+       /* boolean matches2 = Pattern.matches("^(\\d+\\w*),?\\s*([a-zA-Z\\s]+),?\\s*([a-zA-Z\\s]+),?$", txtAddress.getText());
         if(!matches2){
             Alert alert = new Alert(Alert.AlertType.ERROR, "invalid address");
             alert.showAndWait();
             return false;
-        }
+        }*/
 
         boolean matches3 = Pattern.matches("^(?:\\+94|0)([1-9])\\d{8}$", txtContact.getText());
         if(!matches3){

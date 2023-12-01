@@ -125,8 +125,8 @@ public class Supplierformcontroller implements Initializable {
                     SupplierUpdateformcontroller.name=name;
                     SupplierUpdateformcontroller.address=address;
                     SupplierUpdateformcontroller.contact=contact;
-                    Parent parent = null;
                     SupplierUpdateformcontroller.apane = apane;
+                    Parent parent = null;
                     try {
                         parent = FXMLLoader.load(getClass().getResource("/view/supplierUpdateform.fxml"));
                     } catch (IOException e) {

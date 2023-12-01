@@ -110,12 +110,12 @@ public class CustomerPopWindowcontroller {
             return false;
         }
 
-        boolean matches2 = Pattern.matches("^(\\d+\\w*),?\\s*([a-zA-Z\\s]+),?\\s*([a-zA-Z\\s]+),?$", customeraddress.getText());
+       /* boolean matches2 = Pattern.matches("^(\\d+\\w*),?\\s*([a-zA-Z\\s]+),?\\s*([a-zA-Z\\s]+),?$", customeraddress.getText());
         if(!matches2){
             Alert alert = new Alert(Alert.AlertType.ERROR,"Invalid address");
             alert.showAndWait();
             return false;
-        }
+        }*/
 
         boolean matches3 = Pattern.matches("^(?:\\+94|0)([1-9])\\d{8}$", customerContact.getText());
         if (!matches3) {
@@ -124,12 +124,12 @@ public class CustomerPopWindowcontroller {
             return false;
         }
 
-        boolean matches4 = Pattern.matches("(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])", customerEmail.getText());
+       /* boolean matches4 = Pattern.matches("(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])", customerEmail.getText());
         if (!matches4) {
             Alert alert = new Alert(Alert.AlertType.ERROR,"Invalid email");
             alert.showAndWait();
             return false;
-        }
+        }*/
         return true;
     }
 

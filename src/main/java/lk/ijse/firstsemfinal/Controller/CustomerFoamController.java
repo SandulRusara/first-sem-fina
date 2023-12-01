@@ -173,6 +173,7 @@ public class CustomerFoamController implements Initializable {
                 CustomerUpdateformcontroller.address = address ;
                 CustomerUpdateformcontroller.con = contact ;
                 CustomerUpdateformcontroller.mail =email;
+                CustomerUpdateformcontroller.apane = subpane;
 
                 Parent parent = null;
                 try {

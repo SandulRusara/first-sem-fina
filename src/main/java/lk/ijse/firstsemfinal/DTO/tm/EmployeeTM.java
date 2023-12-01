@@ -16,4 +16,5 @@ public class EmployeeTM {
     private String contactColumn;
     private String NicColum;
     private JFXButton deleteColum;
+    private JFXButton updateColum;
 }

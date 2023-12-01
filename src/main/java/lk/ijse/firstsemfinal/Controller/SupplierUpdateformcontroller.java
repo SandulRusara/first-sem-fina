@@ -50,7 +50,7 @@ public class SupplierUpdateformcontroller implements Initializable {
 
 
     @FXML
-    void btnSupplierSaveOnAction(ActionEvent event) {
+    void btnSupplierSaveOnAction(ActionEvent event) throws IOException {
         String name = txtName.getText();
         String address = txtAddress.getText();
         String con = txtContact.getText();
@@ -62,6 +62,9 @@ public class SupplierUpdateformcontroller implements Initializable {
             new Alert(Alert.AlertType.CONFIRMATION,"Update successfully");
             Stage stage = (Stage) saveButton.getScene().getWindow();
             stage.close();
+            Parent parent = FXMLLoader.load(getClass().getResource("/view/supplierform.fxml"));
+            apane.getChildren().clear();
+            apane.getChildren().add(parent);
 //            Parent parent = null;
 //            try {
 //                parent = FXMLLoader.load(getClass().getResource("/view/foodsUpdateform.fxml"));
