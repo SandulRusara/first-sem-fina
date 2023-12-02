@@ -20,10 +20,17 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import lk.ijse.firstsemfinal.DTO.customerDTO;
 import lk.ijse.firstsemfinal.DTO.tm.customerTM;
+import lk.ijse.firstsemfinal.DbConnection.Dbconnection;
 import lk.ijse.firstsemfinal.Model.CustomerModle;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.design.JasperDesign;
+import net.sf.jasperreports.engine.xml.JRXmlLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -106,6 +113,19 @@ public class CustomerFoamController implements Initializable {
         CustomerPopWindowcontroller.pane = subpane;
         stage.show();
 
+    }
+    @FXML
+    void btnReportOnAction(ActionEvent event) throws JRException, SQLException {
+        InputStream resourceAsStream = getClass().getResourceAsStream("/report/customer.jrxml");
+        JasperDesign load = JRXmlLoader.load(resourceAsStream);
+        JasperReport jasperReport = JasperCompileManager.compileReport(load);
+        JasperPrint jasperPrint = JasperFillManager.fillReport(
+                jasperReport,
+                null,
+                Dbconnection.getInstance().getConnection()
+        );
+
+        JasperViewer.viewReport(jasperPrint,false);
     }
     public void setValues(){
         //idcolumn.setCellValueFactory(new PropertyValueFactory<customerTM,String>("custId"));

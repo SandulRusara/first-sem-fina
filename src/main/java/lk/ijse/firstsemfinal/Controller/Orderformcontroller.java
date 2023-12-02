@@ -95,7 +95,7 @@ public class Orderformcontroller implements Initializable {
     void onPlaceOrderClick(ActionEvent event) {
         int oID = 0;
 
-        ordersDTO ordersDTO = new ordersDTO(0,totalll.getText(),"asdasf", dateField.getText(),customerbyContact.getCustomerId());
+        ordersDTO ordersDTO = new ordersDTO(0,totalll.getText(),"Beverages", dateField.getText(),customerbyContact.getCustomerId());
         boolean b = OrderModel.saveOrder(ordersDTO);
         if (b){
             ArrayList<lk.ijse.firstsemfinal.DTO.ordersDTO> allOrdes = OrderModel.getAllOrdes();
@@ -250,7 +250,7 @@ public class Orderformcontroller implements Initializable {
     }
 
     public void btnPrintOnAction(ActionEvent actionEvent) throws JRException, SQLException {
-        InputStream resourceAsStream = getClass().getResourceAsStream("/report/Blank_A4_1.jrxml");
+        InputStream resourceAsStream = getClass().getResourceAsStream("/report/ordersbill.jrxml");
         JasperDesign load = JRXmlLoader.load(resourceAsStream);
         JasperReport jasperReport = JasperCompileManager.compileReport(load);
         JasperPrint jasperPrint = JasperFillManager.fillReport(

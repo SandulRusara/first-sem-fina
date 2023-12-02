@@ -29,5 +29,10 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
+      <JFXButton layoutX="1065.0" layoutY="155.0" onAction="#btnReportOnAction" prefHeight="54.0" prefWidth="226.0" style="-fx-background-color: #31F301; -fx-background-radius: 30;" text="Report">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>
