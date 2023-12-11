@@ -69,7 +69,7 @@ public class CustomerPopWindowcontroller {
 
 
                 Mail mail = new Mail();
-                mail.setMsg("Hello"+
+                mail.setMsg("Hello you are now registerd! Blend Buddy juice bar"+
                         "\nTime : " +
                         Time.valueOf(LocalTime.now()) + "\n" +
                         "Date : " +

@@ -96,12 +96,12 @@ public class EmployeePopWindowformcontroller {
             return false;
         }
 
-        boolean matches4 = Pattern.matches("^[0-9]{9}[vV]$", txtNic.getText());
+       /* boolean matches4 = Pattern.matches("^[0-9]{9}[vV]$", txtNic.getText());
         if(!matches4){
             Alert alert = new Alert(Alert.AlertType.ERROR, "invalid nic");
             alert.showAndWait();
             return false;
-        }
+        }*/
         return true;
     }
 }
